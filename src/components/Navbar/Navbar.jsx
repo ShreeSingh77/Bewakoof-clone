@@ -1,7 +1,17 @@
-import { FiSearch, FiHeart, FiShoppingBag, FiUser } from "react-icons/fi";
+import { useState } from "react";
+import {
+  FiSearch,
+  FiHeart,
+  FiShoppingBag,
+  FiUser,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import "./Navbar.css";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -11,7 +21,7 @@ function Navbar() {
           BEWAKOOF
         </div>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <nav className="navbar-links">
           <a href="/">MEN</a>
           <a href="/">WOMEN</a>
@@ -40,9 +50,34 @@ function Navbar() {
           <button aria-label="Cart">
             <FiShoppingBag />
           </button>
-        </div>
 
+          {/* Mobile Menu Button */}
+          <button
+            className="mobile-menu-button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <nav className="mobile-menu">
+          <a href="/" onClick={() => setMenuOpen(false)}>
+            MEN
+          </a>
+
+          <a href="/" onClick={() => setMenuOpen(false)}>
+            WOMEN
+          </a>
+
+          <a href="/" onClick={() => setMenuOpen(false)}>
+            ACCESSORIES
+          </a>
+        </nav>
+      )}
     </header>
   );
 }
