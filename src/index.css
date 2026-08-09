@@ -35,3 +35,9 @@ img {
   max-width: 100%;
   display: block;
 }
+
+html,body,
+#root{
+  width:100%;
+  overflow-x:hidden;
+}

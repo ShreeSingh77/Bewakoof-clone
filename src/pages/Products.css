@@ -1,0 +1,164 @@
+.products-page {
+  min-height: 500px;
+  padding: 70px 7%;
+  background: #fff;
+}
+
+.products-page > p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.products-page h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.products-placeholder {
+  margin-top: 50px;
+  padding: 60px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f7f7;
+  color: #777;
+  font-size: 15px;
+}
+
+.products-category-nav {
+  width: 100%;
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+
+  overflow: hidden;
+  box-sizing:border-box;
+}
+
+
+/* MEN / WOMEN */
+
+.gender-tabs {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  margin-left: 35px;
+
+  padding: 4px;
+
+  background: #f5f5f5;
+  border-radius: 30px;
+}
+
+.gender-tabs a {
+  min-width: 100px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 25px;
+
+  transition: 0.25s ease;
+}
+
+.gender-tabs a.active {
+  background: #ffd21c;
+  color: #111;
+}
+
+/* Scrollable Categories */
+
+.category-scroll {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 55px;
+
+  margin-left: 45px;
+  padding-right: 40px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  white-space: nowrap;
+
+  scrollbar-width: none;
+
+  cursor: grab;
+}
+
+.category-scroll:active {
+  cursor: grabbing;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.category-scroll a {
+  flex: 0 0 auto;
+
+  color: #222;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.category-scroll a:hover {
+  color: #777;
+}
+@media (max-width: 600px) {
+  .products-category-nav {
+    height: 56px;
+  }
+
+  .gender-tabs {
+    flex-shrink: 0;
+    margin-left: 10px;
+    padding: 3px;
+  }
+
+  .gender-tabs a {
+    min-width: 70px;
+    height: 38px;
+    font-size: 12px;
+  }
+
+  .category-scroll {
+    min-width: 0;
+    gap: 25px;
+    margin-left: 20px;
+    padding-right: 30px;
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-scroll a {
+    font-size: 12px;
+  }
+}
