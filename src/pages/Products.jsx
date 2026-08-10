@@ -1,5 +1,8 @@
 import { Link, useSearchParams } from "react-router-dom";
 import "./Products.css";
+import ProductCard from "../components/ProductCard/ProductCard";
+import products from "../data/products";
+
 
 function Products() {
   const [searchParams] = useSearchParams();
@@ -15,6 +18,10 @@ function Products() {
           ? "Accessories"
           : "All Products";
 
+          const filteredProducts =
+  category && ["men", "women"].includes(category)
+    ? products.filter((product) => product.category === category)
+    : products;
   return (
     <main>
       {/* Category Navigation */}
@@ -80,9 +87,14 @@ function Products() {
 
         <h1>{categoryName}</h1>
 
-        <div className="products-placeholder">
-          Products will appear here.
-        </div>
+       <div className="products-grid">
+  {filteredProducts.map((product) => (
+    <ProductCard
+      key={product.id}
+      product={product}
+    />
+  ))}
+</div>
       </section>
     </main>
   );

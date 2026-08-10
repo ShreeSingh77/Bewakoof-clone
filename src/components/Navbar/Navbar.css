@@ -101,6 +101,30 @@
   color: #f05a28;
 }
 
+/* ================================
+   NAVBAR ACTION LINKS
+================================ */
+
+.navbar-action-link,
+.navbar-cart-link {
+  color: #111;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.navbar-action-link:hover,
+.navbar-cart-link:hover {
+  color: #555;
+}
 /* Responsive */
 
 @media (max-width: 900px) {

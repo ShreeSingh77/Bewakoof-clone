@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FiSearch,
   FiHeart,
@@ -7,6 +8,7 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi";
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -14,70 +16,163 @@ function Navbar() {
 
   return (
     <header className="navbar">
+
       <div className="navbar-container">
 
-        {/* Logo */}
-        <div className="navbar-logo">
-          BEWAKOOF
-        </div>
+        {/* ================= LOGO ================= */}
 
-        {/* Desktop Navigation */}
+        <Link
+          to="/"
+          className="navbar-logo"
+        >
+          BEWAKOOF
+        </Link>
+
+
+        {/* ================= DESKTOP NAVIGATION ================= */}
+
         <nav className="navbar-links">
-          <a href="/">MEN</a>
-          <a href="/">WOMEN</a>
-          <a href="/">ACCESSORIES</a>
+
+          <Link to="/products?category=men">
+            MEN
+          </Link>
+
+          <Link to="/products?category=women">
+            WOMEN
+          </Link>
+
+          <Link to="/products?category=accessories">
+            ACCESSORIES
+          </Link>
+
         </nav>
 
-        {/* Search */}
+
+        {/* ================= SEARCH ================= */}
+
         <div className="navbar-search">
+
           <FiSearch />
+
           <input
             type="text"
             placeholder="Search for products"
           />
+
         </div>
 
-        {/* Actions */}
+
+        {/* ================= ACTIONS ================= */}
+
         <div className="navbar-actions">
-          <button aria-label="Account">
+
+          {/* Account */}
+
+          <Link
+            to="/profile"
+            className="navbar-action-link"
+            aria-label="Account"
+          >
             <FiUser />
-          </button>
+          </Link>
 
-          <button aria-label="Wishlist">
+
+          {/* Wishlist */}
+
+          <Link
+            to="/wishlist"
+            className="navbar-action-link"
+            aria-label="Wishlist"
+          >
             <FiHeart />
-          </button>
+          </Link>
 
-          <button aria-label="Cart">
+
+          {/* Cart */}
+
+          <Link
+            to="/cart"
+            className="navbar-cart-link"
+            aria-label="Cart"
+          >
             <FiShoppingBag />
-          </button>
+          </Link>
 
-          {/* Mobile Menu Button */}
+
+          {/* Mobile Menu */}
+
           <button
             className="mobile-menu-button"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
             aria-label="Toggle menu"
           >
-            {menuOpen ? <FiX /> : <FiMenu />}
+            {menuOpen ? (
+              <FiX />
+            ) : (
+              <FiMenu />
+            )}
           </button>
+
         </div>
+
       </div>
 
-      {/* Mobile Menu */}
+
+      {/* ================= MOBILE MENU ================= */}
+
       {menuOpen && (
         <nav className="mobile-menu">
-          <a href="/" onClick={() => setMenuOpen(false)}>
+
+          <Link
+            to="/products?category=men"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
             MEN
-          </a>
+          </Link>
 
-          <a href="/" onClick={() => setMenuOpen(false)}>
+          <Link
+            to="/products?category=women"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
             WOMEN
-          </a>
+          </Link>
 
-          <a href="/" onClick={() => setMenuOpen(false)}>
+          <Link
+            to="/products?category=accessories"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
             ACCESSORIES
-          </a>
+          </Link>
+
+          <Link
+            to="/wishlist"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
+            WISHLIST
+          </Link>
+
+          <Link
+            to="/cart"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
+            CART
+          </Link>
+
         </nav>
       )}
+
     </header>
   );
 }
