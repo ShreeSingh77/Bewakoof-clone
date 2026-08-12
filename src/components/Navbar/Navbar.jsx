@@ -13,18 +13,20 @@ import "./Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [megaMenu, setMegaMenu] = useState(null);
 
   return (
-    <header className="navbar">
+    <header
+      className="navbar"
+      onMouseLeave={() => setMegaMenu(null)}
+    >
+
+      {/* ================= TOP NAVBAR ================= */}
 
       <div className="navbar-container">
 
-        {/* ================= LOGO ================= */}
-
-        <Link
-          to="/"
-          className="navbar-logo"
-        >
+        {/* Logo */}
+        <Link to="/" className="navbar-logo">
           BEWAKOOF
         </Link>
 
@@ -33,19 +35,34 @@ function Navbar() {
 
         <nav className="navbar-links">
 
-          <Link to="/products?category=men">
-            MEN
-          </Link>
+  <div
+    className="nav-mega-trigger"
+    onMouseEnter={() => setMegaMenu("men")}
+  >
+    <button type="button">
+      MEN
+    </button>
+  </div>
 
-          <Link to="/products?category=women">
-            WOMEN
-          </Link>
+  <div
+    className="nav-mega-trigger"
+    onMouseEnter={() => setMegaMenu("women")}
+  >
+    <button type="button">
+      WOMEN
+    </button>
+  </div>
 
-          <Link to="/products?category=accessories">
-            ACCESSORIES
-          </Link>
+  <div
+    className="nav-mega-trigger"
+    onMouseEnter={() => setMegaMenu("accessories")}
+  >
+    <button type="button">
+      ACCESSORIES
+    </button>
+  </div>
 
-        </nav>
+</nav>
 
 
         {/* ================= SEARCH ================= */}
@@ -66,8 +83,6 @@ function Navbar() {
 
         <div className="navbar-actions">
 
-          {/* Account */}
-
           <Link
             to="/profile"
             className="navbar-action-link"
@@ -77,8 +92,6 @@ function Navbar() {
           </Link>
 
 
-          {/* Wishlist */}
-
           <Link
             to="/wishlist"
             className="navbar-action-link"
@@ -87,8 +100,6 @@ function Navbar() {
             <FiHeart />
           </Link>
 
-
-          {/* Cart */}
 
           <Link
             to="/cart"
@@ -103,16 +114,11 @@ function Navbar() {
 
           <button
             className="mobile-menu-button"
-            onClick={() =>
-              setMenuOpen(!menuOpen)
-            }
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {menuOpen ? (
-              <FiX />
-            ) : (
-              <FiMenu />
-            )}
+            {menuOpen ? <FiX /> : <FiMenu />}
           </button>
 
         </div>
@@ -120,52 +126,308 @@ function Navbar() {
       </div>
 
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* =================================================
+          MEGA MENU
+      ================================================= */}
+
+      {megaMenu && (
+        <div className="mega-menu">
+
+          <div className="mega-menu-container">
+
+
+            {/* ================= MEN ================= */}
+
+            {megaMenu === "men" && (
+              <>
+
+                <div className="mega-column">
+
+                  <h3>TOPWEAR</h3>
+
+                  <Link to="/products?category=men">
+                    T-Shirts
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Oversized T-Shirts
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Shirts
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Hoodies
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Sweatshirts
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column">
+
+                  <h3>BOTTOMWEAR</h3>
+
+                  <Link to="/products?category=men">
+                    Jeans
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Joggers
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Shorts
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Trousers
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column">
+
+                  <h3>FOOTWEAR</h3>
+
+                  <Link to="/products?category=men">
+                    Sneakers
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Casual Shoes
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Slippers
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column highlight-column">
+
+                  <h3>SHOP MEN</h3>
+
+                  <Link to="/products?category=men">
+                    All Men's Products
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    New Arrivals
+                  </Link>
+
+                  <Link to="/products?category=men">
+                    Best Sellers
+                  </Link>
+
+                </div>
+
+              </>
+            )}
+
+
+            {/* ================= WOMEN ================= */}
+
+            {megaMenu === "women" && (
+              <>
+
+                <div className="mega-column">
+
+                  <h3>TOPWEAR</h3>
+
+                  <Link to="/products?category=women">
+                    T-Shirts
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Tops
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Shirts
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Hoodies
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column">
+
+                  <h3>BOTTOMWEAR</h3>
+
+                  <Link to="/products?category=women">
+                    Jeans
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Joggers
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Trousers
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Shorts
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column">
+
+                  <h3>ETHNIC WEAR</h3>
+
+                  <Link to="/products?category=women">
+                    Kurtas
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Dresses
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Co-ords
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column highlight-column">
+
+                  <h3>SHOP WOMEN</h3>
+
+                  <Link to="/products?category=women">
+                    All Women's Products
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    New Arrivals
+                  </Link>
+
+                  <Link to="/products?category=women">
+                    Best Sellers
+                  </Link>
+
+                </div>
+
+              </>
+            )}
+
+
+            {/* ================= ACCESSORIES ================= */}
+
+            {megaMenu === "accessories" && (
+              <>
+
+                <div className="mega-column">
+
+                  <h3>ACCESSORIES</h3>
+
+                  <Link to="/products?category=accessories">
+                    Caps
+                  </Link>
+
+                  <Link to="/products?category=accessories">
+                    Bags
+                  </Link>
+
+                  <Link to="/products?category=accessories">
+                    Wallets
+                  </Link>
+
+                  <Link to="/products?category=accessories">
+                    Belts
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column">
+
+                  <h3>COLLECTIONS</h3>
+
+                  <Link to="/products?category=accessories">
+                    Trending
+                  </Link>
+
+                  <Link to="/products?category=accessories">
+                    New Arrivals
+                  </Link>
+
+                  <Link to="/products?category=accessories">
+                    Best Sellers
+                  </Link>
+
+                </div>
+
+
+                <div className="mega-column highlight-column">
+
+                  <h3>SHOP ACCESSORIES</h3>
+
+                  <Link to="/products?category=accessories">
+                    All Accessories
+                  </Link>
+
+                </div>
+
+              </>
+            )}
+
+          </div>
+
+        </div>
+      )}
+
+
+      {/* =================================================
+          MOBILE MENU
+      ================================================= */}
 
       {menuOpen && (
         <nav className="mobile-menu">
 
           <Link
             to="/products?category=men"
-            onClick={() =>
-              setMenuOpen(false)
-            }
+            onClick={() => setMenuOpen(false)}
           >
             MEN
           </Link>
 
           <Link
             to="/products?category=women"
-            onClick={() =>
-              setMenuOpen(false)
-            }
+            onClick={() => setMenuOpen(false)}
           >
             WOMEN
           </Link>
 
           <Link
             to="/products?category=accessories"
-            onClick={() =>
-              setMenuOpen(false)
-            }
+            onClick={() => setMenuOpen(false)}
           >
             ACCESSORIES
           </Link>
 
           <Link
             to="/wishlist"
-            onClick={() =>
-              setMenuOpen(false)
-            }
+            onClick={() => setMenuOpen(false)}
           >
             WISHLIST
           </Link>
 
           <Link
             to="/cart"
-            onClick={() =>
-              setMenuOpen(false)
-            }
+            onClick={() => setMenuOpen(false)}
           >
             CART
           </Link>

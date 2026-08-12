@@ -10,6 +10,8 @@ import Cart from "./pages/Cart.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import Wishlist from "./pages/Wishlist.jsx";
 import Profile from "./pages/Profile.jsx";
+
+import Orders from "./pages/Orders.jsx";
 function App() {
   return (
     <>
@@ -50,8 +52,9 @@ function App() {
 <Route path="/profile" 
 element={<Profile />} />
 
-
-
+<Route path="/orders" 
+element={<Orders />}
+/>
 
 
         {/* WISHLIST */}

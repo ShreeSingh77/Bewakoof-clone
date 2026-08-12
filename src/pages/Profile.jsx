@@ -22,7 +22,7 @@ function Profile() {
   // ================= PROFILE DATA =================
 
   const [profile, setProfile] = useState({
-    name: "Sudhanshu Singh",
+    name: "Shree Singh",
     email: "your@email.com",
     mobile: "+91 XXXXX XXXXX",
     dob: "",
