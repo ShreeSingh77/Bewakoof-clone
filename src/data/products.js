@@ -1678,23 +1678,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/women-shirt/shirts1.jpg",
+          "/produts/women/women-shirt/shirts1ii.webp",
+          "/produts/women/women-shirt/shirts1iii.webp",
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/women-shirt/shirts4.jpg",
+          "/produts/women/women-shirt/shirts4i.jpg",
+          "/produts/women/women-shirt/shirts4ii.jpg",
+          "/produts/women/women-shirt/shirts4iii.jpg",
+          "/produts/women/women-shirt/shirts4iv.jpg"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/women-shirt/shirts1.jpg",
   },
 
   {
@@ -1714,25 +1716,29 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+            "/produts/women/women-shirt/shirts2.jpg",
+          "/produts/women/women-shirt/shirts2i.jpg",
+          "/produts/women/women-shirt/shirts2ii.jpg",
+          "/produts/women/women-shirt/shirts2iii.jpg",
+          "/produts/women/women-shirt/shirts2iv.jpg"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+           "/produts/women/women-shirt/shirts3.jpg",
+          "/produts/women/women-shirt/shirts3i.jpg",
+          "/produts/women/women-shirt/shirts3ii.jpg",
+         
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "/products/women/women-shirt/shirts1.jpg",
+      "/produts/women/women-shirt/shirts2.jpg",
   },
 
+  
   // Hoodies
   {
     id: 45,
@@ -1751,23 +1757,26 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/hoddies/hoddies3.webp",
+          "/produts/women/hoddies/hoddies3i.webp",
+          "/produts/women/hoddies/hoddies3ii.webp",
+          "/produts/women/hoddies/hoddies3iii.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/hoddies/hoddies4.jpg",
+          "/produts/women/hoddies/hoddies4i.jpg",
+          "/produts/women/hoddies/hoddies4ii.jpg",
+          "/produts/women/hoddies/hoddies4iii.jpg",
+          "/produts/women/hoddies/hoddies4iv.jpg"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/hoddies/hoddies3.webp",
   },
 
   {
@@ -1787,23 +1796,27 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/hoddies/hoddies4.jpg",
+          "/produts/women/hoddies/hoddies4i.jpg",
+          "/produts/women/hoddies/hoddies4ii.jpg",
+          "/produts/women/hoddies/hoddies4iii.jpg",
+          "/produts/women/hoddies/hoddies4iv.jpg"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/hoddies/hoddies5.webp",
+          "/produts/women/hoddies/hoddies5i.webp",
+          "/produts/women/hoddies/hoddies5ii.webp",
+          "/produts/women/hoddies/hoddies5iii.webp",
+          "/produts/women/hoddies/hoddies5iv.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/hoddies/hoddies4.jpg",
   },
 
   // Jeans
@@ -1824,23 +1837,28 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+
+          "/produts/women/women-jeans/jeans3.webp",
+          "/produts/women/women-jeans/jeans3ii.webp",
+          "/produts/women/women-jeans/jeans3iii.webp",
+          "/produts/women/women-jeans/jeans3iv.webp"
+
+         
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+           "/produts/women/women-jeans/jeans1.webp",
+          "/produts/women/women-jeans/jeans1i.webp",
+          "/produts/women/women-jeans/jeans1ii.webp",
+          "/produts/women/women-jeans/jeans1iii.webp"
         ],
       },
     ],
     sizes: ["28", "30", "32", "34"],
     image:
-      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/women-jeans/jeans3.webp",
   },
 
   {
@@ -1860,23 +1878,24 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+           "/produts/women/women-jeans/jeans1.webp",
+          "/produts/women/women-jeans/jeans1i.webp",
+          "/produts/women/women-jeans/jeans1ii.webp",
+          "/produts/women/women-jeans/jeans1iii.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+            "/produts/women/women-jeans/jeans2.webp",
+          "/produts/women/women-jeans/jeans2i.webp",
+          "/produts/women/women-jeans/jeans2ii.webp",
         ],
       },
     ],
     sizes: ["28", "30", "32", "34"],
     image:
-      "https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/women-jeans/jeans1.webp",
   },
 
   // Joggers
