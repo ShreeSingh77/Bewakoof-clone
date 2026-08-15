@@ -4,43 +4,65 @@ import "./Hero.css";
 function Hero() {
   return (
     <section className="hero">
+
       <div className="hero-content">
-        <p className="hero-tag">NEW SEASON • NEW STYLE</p>
+
+        <p className="hero-tag">
+          NEW SEASON • NEW STYLE
+        </p>
 
         <h1>
-          Wear Your
-          <span> Vibe</span>
+          Style
+          <span>That Moves</span>
+          <span>With You.</span>
         </h1>
 
         <p className="hero-description">
-          Discover trendy styles made for everyday comfort and confidence.
+          Discover everyday fashion designed for comfort,
+          confidence and your own unique vibe.
         </p>
 
         <div className="hero-buttons">
-         <Link
-  to="/products?category=men"
-  className="hero-btn hero-btn-primary"
->
-  SHOP MEN
-</Link>
 
-<Link
-  to="/products?category=women"
-  className="hero-btn hero-btn-secondary"
->
-  SHOP WOMEN
-</Link>
+          <Link
+            to="/products?category=men"
+            className="hero-btn hero-btn-primary"
+          >
+            SHOP MEN
+          </Link>
+
+          <Link
+            to="/products?category=women"
+            className="hero-btn hero-btn-secondary"
+          >
+            SHOP WOMEN
+          </Link>
+
         </div>
+
       </div>
+
 
       <div className="hero-visual">
-        <div className="hero-circle"></div>
 
-        <div className="hero-fashion-card">
-          <span>STYLE</span>
-          <strong>EVERY<br />DAY</strong>
+        <div className="hero-image-wrapper">
+
+          <img
+            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85"
+            alt="Fashion collection"
+            className="hero-image"
+          />
+
         </div>
+
+        <div className="hero-badge">
+          <span>NEW</span>
+          <strong>DROP</strong>
+          <small>2026</small>
+        </div>
+
       </div>
+
     </section>
   );
 }

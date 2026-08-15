@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import {
   FiSearch,
   FiHeart,
@@ -12,6 +12,8 @@ import {
 import "./Navbar.css";
 
 function Navbar() {
+  const navigate=useNavigate();
+  const[search ,setSearch ]=useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [megaMenu, setMegaMenu] = useState(null);
 
@@ -67,16 +69,27 @@ function Navbar() {
 
         {/* ================= SEARCH ================= */}
 
-        <div className="navbar-search">
+        <form
+  className="navbar-search"
+  onSubmit={(e) => {
+    e.preventDefault();
 
-          <FiSearch />
+    const query = search.trim();
 
-          <input
-            type="text"
-            placeholder="Search for products"
-          />
+    if (!query) return;
 
-        </div>
+    navigate(`/products?search=${encodeURIComponent(query)}`);
+  }}
+>
+  <FiSearch />
+
+  <input
+    type="text"
+    placeholder="Search for products"
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+  />
+</form>
 
 
         {/* ================= ACTIONS ================= */}
@@ -145,25 +158,25 @@ function Navbar() {
 
                   <h3>TOPWEAR</h3>
 
-                  <Link to="/products?category=men">
-                    T-Shirts
-                  </Link>
+                  <Link to="/products?category=men&subcategory=t-shirts">
+  T-Shirts
+</Link>
 
-                  <Link to="/products?category=men">
-                    Oversized T-Shirts
-                  </Link>
+<Link to="/products?category=men&subcategory=oversized-t-shirts">
+  Oversized T-Shirts
+</Link>
 
-                  <Link to="/products?category=men">
-                    Shirts
-                  </Link>
+<Link to="/products?category=men&subcategory=shirts">
+  Shirts
+</Link>
 
-                  <Link to="/products?category=men">
-                    Hoodies
-                  </Link>
+<Link to="/products?category=men&subcategory=hoodies">
+  Hoodies
+</Link>
 
-                  <Link to="/products?category=men">
-                    Sweatshirts
-                  </Link>
+<Link to="/products?category=men&subcategory=sweatshirts">
+  Sweatshirts
+</Link>
 
                 </div>
 
@@ -172,22 +185,21 @@ function Navbar() {
 
                   <h3>BOTTOMWEAR</h3>
 
-                  <Link to="/products?category=men">
-                    Jeans
-                  </Link>
+                  <Link to="/products?category=men&subcategory=jeans">
+  Jeans
+</Link>
 
-                  <Link to="/products?category=men">
-                    Joggers
-                  </Link>
+<Link to="/products?category=men&subcategory=joggers">
+  Joggers
+</Link>
 
-                  <Link to="/products?category=men">
-                    Shorts
-                  </Link>
+<Link to="/products?category=men&subcategory=shorts">
+  Shorts
+</Link>
 
-                  <Link to="/products?category=men">
-                    Trousers
-                  </Link>
-
+<Link to="/products?category=men&subcategory=trousers">
+  Trousers
+</Link>
                 </div>
 
 
@@ -195,17 +207,17 @@ function Navbar() {
 
                   <h3>FOOTWEAR</h3>
 
-                  <Link to="/products?category=men">
-                    Sneakers
-                  </Link>
+                 <Link to="/products?category=men&subcategory=sneakers">
+  Sneakers
+</Link>
 
-                  <Link to="/products?category=men">
-                    Casual Shoes
-                  </Link>
+<Link to="/products?category=men&subcategory=casual-shoes">
+  Casual Shoes
+</Link>
 
-                  <Link to="/products?category=men">
-                    Slippers
-                  </Link>
+<Link to="/products?category=men&subcategory=slippers">
+  Slippers
+</Link>
 
                 </div>
 
@@ -241,21 +253,21 @@ function Navbar() {
 
                   <h3>TOPWEAR</h3>
 
-                  <Link to="/products?category=women">
-                    T-Shirts
-                  </Link>
+                  <Link to="/products?category=women&subcategory=t-shirts">
+  T-Shirts
+</Link>
 
-                  <Link to="/products?category=women">
-                    Tops
-                  </Link>
+<Link to="/products?category=women&subcategory=tops">
+  Tops
+</Link>
 
-                  <Link to="/products?category=women">
-                    Shirts
-                  </Link>
+<Link to="/products?category=women&subcategory=shirts">
+  Shirts
+</Link>
 
-                  <Link to="/products?category=women">
-                    Hoodies
-                  </Link>
+<Link to="/products?category=women&subcategory=hoodies">
+  Hoodies
+</Link>
 
                 </div>
 
@@ -264,21 +276,21 @@ function Navbar() {
 
                   <h3>BOTTOMWEAR</h3>
 
-                  <Link to="/products?category=women">
-                    Jeans
-                  </Link>
+                 <Link to="/products?category=women&subcategory=jeans">
+  Jeans
+</Link>
 
-                  <Link to="/products?category=women">
-                    Joggers
-                  </Link>
+<Link to="/products?category=women&subcategory=joggers">
+  Joggers
+</Link>
 
-                  <Link to="/products?category=women">
-                    Trousers
-                  </Link>
+<Link to="/products?category=women&subcategory=trousers">
+  Trousers
+</Link>
 
-                  <Link to="/products?category=women">
-                    Shorts
-                  </Link>
+<Link to="/products?category=women&subcategory=shorts">
+  Shorts
+</Link>
 
                 </div>
 
@@ -287,17 +299,17 @@ function Navbar() {
 
                   <h3>ETHNIC WEAR</h3>
 
-                  <Link to="/products?category=women">
-                    Kurtas
-                  </Link>
+                 <Link to="/products?category=women&subcategory=kurtas">
+  Kurtas
+</Link>
 
-                  <Link to="/products?category=women">
-                    Dresses
-                  </Link>
+<Link to="/products?category=women&subcategory=dresses">
+  Dresses
+</Link>
 
-                  <Link to="/products?category=women">
-                    Co-ords
-                  </Link>
+<Link to="/products?category=women&subcategory=co-ords">
+  Co-ords
+</Link>
 
                 </div>
 
@@ -333,21 +345,21 @@ function Navbar() {
 
                   <h3>ACCESSORIES</h3>
 
-                  <Link to="/products?category=accessories">
-                    Caps
-                  </Link>
+                 <Link to="/products?category=accessories&subcategory=caps">
+  Caps
+</Link>
 
-                  <Link to="/products?category=accessories">
-                    Bags
-                  </Link>
+<Link to="/products?category=accessories&subcategory=bags">
+  Bags
+</Link>
 
-                  <Link to="/products?category=accessories">
-                    Wallets
-                  </Link>
+<Link to="/products?category=accessories&subcategory=wallets">
+  Wallets
+</Link>
 
-                  <Link to="/products?category=accessories">
-                    Belts
-                  </Link>
+<Link to="/products?category=accessories&subcategory=belts">
+  Belts
+</Link>
 
                 </div>
 

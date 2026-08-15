@@ -273,38 +273,68 @@
   font-weight: 400;
   color: #666;
 }
+/* ===============================
+   COLOUR OPTIONS
+================================ */
 
 .colour-options {
   display: flex;
   gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
 }
 
 .colour-option {
   width: 72px;
   height: 82px;
-
-  padding: 2px;
-
+  padding: 3px;
   border: 1px solid #ddd;
-
   background: #fff;
-
   cursor: pointer;
-
+  border-radius: 4px;
   overflow: hidden;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.colour-option:hover {
+  border-color: #222;
 }
 
 .colour-option img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
+  display: block;
 }
+
+/* Small exact colour indicator */
+
+.colour-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+  border: 1px solid #fff;
+  box-shadow: 0 0 0 1px #aaa;
+}
+
+/* Selected colour */
 
 .colour-option.selected-colour {
   border: 2px solid #111;
 }
 
+/* Selected colour name */
+
+.selected-colour-name {
+  margin-left: 5px;
+  font-weight: 400;
+  color: #555;
+}
 
 /* =================================
    SIZE
@@ -569,4 +599,384 @@
     width: 52px;
     height: 52px;
   }
+}
+
+/* =========================================
+   PRODUCT DETAILS EXTRA CONTENT
+========================================= */
+
+.product-description-section,
+.product-recommendation-section,
+.testimonials-section {
+  max-width: 1350px;
+  margin: 70px auto 0;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 14px;
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #111;
+}
+
+.recommendation-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommendation-heading a {
+  color: #111;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.product-description-content {
+  max-width: 900px;
+}
+
+.product-description-content > p {
+  margin: 0;
+
+  color: #555;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* Product Highlights */
+
+.product-highlights {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.product-highlights > div {
+  padding: 18px;
+
+  background: #f7f7f7;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.product-highlights span {
+  font-size: 12px;
+  color: #777;
+}
+
+.product-highlights strong {
+  font-size: 13px;
+  color: #222;
+}
+
+
+/* =========================================
+   RECOMMENDATION PRODUCTS
+========================================= */
+
+.recommendation-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.recommendation-card {
+  color: #111;
+
+  text-decoration: none;
+
+  min-width: 0;
+}
+
+.recommendation-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 0.78;
+
+  overflow: hidden;
+
+  background: #f5f5f5;
+}
+
+.recommendation-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.recommendation-card:hover
+.recommendation-image img {
+  transform: scale(1.04);
+}
+
+
+/* Heart */
+
+.recommendation-heart {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #222;
+
+  cursor: pointer;
+}
+
+.recommendation-heart svg {
+  font-size: 17px;
+}
+
+
+/* Product Info */
+
+.recommendation-info {
+  padding-top: 12px;
+}
+
+.recommendation-info p {
+  margin: 0 0 5px;
+
+  font-size: 11px;
+
+  color: #777;
+
+  font-weight: 600;
+}
+
+.recommendation-info h3 {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  color: #222;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommendation-price {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 8px;
+}
+
+.recommendation-price strong {
+  font-size: 15px;
+}
+
+.recommendation-price span {
+  font-size: 12px;
+
+  color: #999;
+
+  text-decoration: line-through;
+}
+
+.recommendation-price em {
+  font-size: 10px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  color: #168a42;
+}
+
+
+/* =========================================
+   TESTIMONIALS
+========================================= */
+
+.testimonials-section {
+  padding-bottom: 80px;
+}
+
+.testimonials-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.testimonial-card {
+  padding: 25px;
+
+  border: 1px solid #e5e5e5;
+
+  background: #fff;
+}
+
+.testimonial-rating {
+  margin-bottom: 14px;
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  color: #111;
+}
+
+.testimonial-card p {
+  margin: 0 0 20px;
+
+  color: #555;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.testimonial-card strong {
+  display: block;
+
+  font-size: 13px;
+
+  color: #111;
+}
+
+.testimonial-card span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 11px;
+
+  color: #888;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .product-description-section,
+  .product-recommendation-section,
+  .testimonials-section {
+    margin-top: 55px;
+  }
+
+  .product-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommendation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .product-description-section,
+  .product-recommendation-section,
+  .testimonials-section {
+    margin-top: 45px;
+  }
+
+  .section-title h2 {
+    font-size: 19px;
+  }
+
+  .product-highlights {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .product-highlights > div {
+    padding: 13px;
+  }
+
+  .recommendation-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  .recommendation-info h3 {
+    font-size: 12px;
+  }
+
+  .recommendation-price strong {
+    font-size: 14px;
+  }
+
+  .testimonial-card {
+    padding: 18px;
+  }
+
 }
