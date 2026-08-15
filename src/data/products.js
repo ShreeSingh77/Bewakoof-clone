@@ -1084,9 +1084,9 @@ colours: [
 
   {
     id: 28,
-    name: "Men Graphic Sweatshirt",
+    name: "Men Graphic Oversized T-shirt",
     brand: "Bewakoof",
-    description: "Graphic sweatshirt with a relaxed modern fit.",
+    description: "Graphic Oversized T-shirt with a relaxed modern fit.",
     category: "men",
     subCategory: "sweatshirts",
     price: 999,
@@ -1099,25 +1099,26 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/men/oversized-tshirts/otshirts3.webp",
-          "/produts/men/oversized-tshirts/otshirts3i.webp",
-          "/produts/men/oversized-tshirts/otshirts3ii.webp",
-          "/produts/men/oversized-tshirts/otshirts3iii.webp"
+           "/produts/men/oversized-tshirts/otshirt2.webp",
+          "/produts/men/oversized-tshirts/oshirts2i.webp",
+          "/produts/men/oversized-tshirts/oshirts2ii.webp",
+          "/produts/men/oversized-tshirts/oshirts2iii.webp"
+        
         ],
       },
       {
         name: "White",
         images: [
-         "/produts/men/oversized-tshirts/otshirt2.webp",
-          "/produts/men/oversized-tshirts/otshirts2i.webp",
-          "/produts/men/oversized-tshirts/otshirts2ii.webp",
-          "/produts/men/oversized-tshirts/otshirts2iii.webp"
+          "/produts/men/oversized-tshirts/oshirts3.webp",
+          "/produts/men/oversized-tshirts/oshirts3i.webp",
+          "/produts/men/oversized-tshirts/oshirts3ii.webp",
+          "/produts/men/oversized-tshirts/oshirts3iii.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "/produts/men/oversized-tshirts/otshirts3.webp",
+      "produts/men/oversized-tshirts/otshirt2.webp",
   },
 
   // Jeans
@@ -1448,23 +1449,24 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/accessories/sneakers/shoes1.jpg",
+          "/produts/accessories/sneakers/shoes1i.jpg",
+          "/produts/accessories/sneakers/shoes1ii.jpg",
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/accessories/sneakers/shoes2.jpg",
+          "/produts/accessories/sneakers/shoes2i.jpg",
+          "/produts/accessories/sneakers/shoes2ii.jpg",
+          "/produts/accessories/sneakers/shoes2iii.jpg"
         ],
       },
     ],
     sizes: ["7", "8", "9", "10"],
     image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/sneakers/shoes1.jpg",
   },
 
   {
@@ -1484,23 +1486,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+         "/produts/accessories/sneakers/shoes2.jpg",
+          "/produts/accessories/sneakers/shoes2i.jpg",
+          "/produts/accessories/sneakers/shoes2ii.jpg",
+          "/produts/accessories/sneakers/shoes2iii.jpg"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/accessories/sneakers/sneakers2.jpg",
+          "/produts/accessories/sneakers/sneakers2ii.jpg",
+          "/produts/accessories/sneakers/sneakers2iii.jpg",
+          "/produts/accessories/sneakers/sneakers2iiii.jpg"
         ],
       },
     ],
     sizes: ["7", "8", "9", "10"],
     image:
-      "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/sneakers/shoes2.jpg",
   },
 
   // Casual Shoes
@@ -1521,23 +1525,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/accessories/sneakers/sneakers2.jpg",
+          "/produts/accessories/sneakers/sneakers2ii.jpg",
+          "/produts/accessories/sneakers/sneakers2iii.jpg",
+          "/produts/accessories/sneakers/sneakers2iiii.jpg"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+           "/produts/accessories/sneakers/sneakers1.webp",
+          "/produts/accessories/sneakers/sneakers1i.webp",
+          "/produts/accessories/sneakers/sneakers1ii.webp",
+         
         ],
       },
     ],
     sizes: ["7", "8", "9", "10"],
     image:
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/sneakers/sneakers2.jpg",
   },
 
   {
@@ -1557,23 +1563,23 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+           "/produts/accessories/sneakers/sneakers1.webp",
+          "/produts/accessories/sneakers/sneakers1i.webp",
+          "/produts/accessories/sneakers/sneakers1ii.webp",
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/accessories/sneakers/shoes1.jpg",
+          "/produts/accessories/sneakers/shoes1i.jpg",
+          "/produts/accessories/sneakers/shoes1ii.jpg",
         ],
       },
     ],
     sizes: ["7", "8", "9", "10"],
     image:
-      "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/sneakers/sneakers1.webp",
   },
 
   // Slippers
@@ -1594,23 +1600,24 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/accessories/sliders/sliders1.jpg",
+          "/produts/accessories/sliders/sliders1ii.jpg",
+          "/produts/accessories/sliders/sliders1iii.jpg",
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+           "/produts/accessories/sliders/sliders2.webp",
+          "/produts/accessories/sliders/sliders2i.webp",
+          "/produts/accessories/sliders/sliders2ii.webp",
+          "/produts/accessories/sliders/sliders2iii.webp"
         ],
       },
     ],
     sizes: ["7", "8", "9", "10"],
     image:
-      "https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/sliders/sliders1ii.jpg",
   },
 
   {
@@ -1630,23 +1637,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/accessories/sliders/sliders2.webp",
+          "/produts/accessories/sliders/sliders2i.webp",
+          "/produts/accessories/sliders/sliders2ii.webp",
+          "/produts/accessories/sliders/sliders2iii.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/accessories/sliders/sliders3.jpg",
+          "/produts/accessories/sliders/sliders3i.jpg",
+          "/produts/accessories/sliders/sliders3ii.jpg",
+          "/produts/accessories/sliders/sliders3iii.jpg"
         ],
       },
     ],
     sizes: ["7", "8", "9", "10"],
     image:
-      "https://images.unsplash.com/photo-1553808373-92b5b5e3f4b8?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/sliders/sliders2.webp",
   },
 
   // ==================== WOMEN ====================
