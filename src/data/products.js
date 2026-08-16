@@ -2527,78 +2527,101 @@ colours: [
        "/produts/accessories/backpack/backpack3.jpg",
   },
 
-  // Wallets
-  {
-    id: 65,
-    name: "Men Classic Leather Wallet",
-    brand: "Bewakoof",
-    description: "Classic compact wallet with multiple card slots.",
-    category: "accessories",
-    subCategory: "wallets",
-    price: 499,
-    originalPrice: 999,
-    discount: 50,
-    rating: 4.5,
-    reviews: 76,
-    material: "Faux Leather",
-    colours: [
-      {
-        name: "Blue",
-        images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
-        ],
-      },
-      {
-        name: "White",
-        images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
-        ],
-      },
-    ],
-    sizes: ["Free Size"],
-    image:
-      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
-  },
+  // clogs
+ {
+  id: 65,
+  name: "Men Classic Casual Clogs",
+  brand: "Bewakoof",
+  description:
+    "Comfortable classic clogs designed for everyday casual wear with a lightweight and relaxed fit.",
+  category: "accessories",
+  subCategory: "clogs",
 
-  {
-    id: 66,
-    name: "Slim Minimal Wallet",
-    brand: "Bewakoof",
-    description: "Slim lightweight wallet for everyday use.",
-    category: "accessories",
-    subCategory: "wallets",
-    price: 449,
-    originalPrice: 899,
-    discount: 50,
-    rating: 4.4,
-    reviews: 64,
-    material: "Faux Leather",
-    colours: [
-      {
-        name: "Blue",
-        images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
-        ],
-      },
-      {
-        name: "White",
-        images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
-        ],
-      },
-    ],
-    sizes: ["Free Size"],
-    image:
-      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
-  },
+  price: 799,
+  originalPrice: 1599,
+  discount: 50,
+
+  rating: 4.5,
+  reviews: 76,
+
+  material: "EVA",
+
+  colours: [
+    {
+      name: "Blue",
+      images: [
+        "/produts/accessories/clogs/clogs1.webp",
+        "/produts/accessories/clogs/clogs1i.webp",
+        "/produts/accessories/clogs/clogs1ii.webp",
+        "/produts/accessories/clogs/clogs1iii.webp"
+      ],
+    },
+
+    {
+      name: "White",
+      images: [
+        "/produts/accessories/clogs/clogs2.jpg",
+        "/produts/accessories/clogs/clogs2i.jpg",
+        "/produts/accessories/clogs/clogs2ii.jpg",
+        "/produts/accessories/clogs/clogs2iii.jpg"
+      ],
+    },
+  ],
+
+  sizes: ["6", "7", "8", "9", "10"],
+
+  image:
+    "/produts/accessories/clogs/clogs1.webp",
+},
+
+{
+  id: 66,
+  name: "Men Everyday Comfort Clogs",
+  brand: "Bewakoof",
+  description:
+    "Lightweight everyday clogs with a comfortable design, perfect for casual outings and daily wear.",
+  category: "accessories",
+  subCategory: "clogs",
+
+  price: 749,
+  originalPrice: 1499,
+  discount: 50,
+
+  rating: 4.4,
+  reviews: 64,
+
+  material: "EVA",
+
+  colours: [
+    {
+      name: "Black",
+      images: [
+        "/produts/accessories/clogs/clogs4.jpg",
+        "/produts/accessories/clogs/clogs4i.jpg",
+        "/produts/accessories/clogs/clogs4ii.jpg",
+        "/produts/accessories/clogs/clogs4iii.jpg",
+        "/produts/accessories/clogs/clogs4iv.jpg"
+        
+      ],
+    },
+
+    {
+      name: "Grey",
+      images: [
+        "/produts/accessories/clogs/clogs3.jpg",
+        "/produts/accessories/clogs/clogs3i.jpg",
+        "/produts/accessories/clogs/clogs3ii.jpg",
+        "/produts/accessories/clogs/clogs3iii.jpg",
+        "/produts/accessories/clogs/clogs3iv.jpg"
+      ],
+    },
+  ],
+
+  sizes: ["6", "7", "8", "9", "10"],
+
+  image:
+    "/produts/accessories/clogs/clogs4.jpg",
+},
 
   // Belts
   {

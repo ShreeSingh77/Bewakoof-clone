@@ -353,8 +353,8 @@ function Navbar() {
   Bags
 </Link>
 
-<Link to="/products?category=accessories&subcategory=wallets">
-  Wallets
+<Link to="/products?category=accessories&subcategory=clogs">
+  clogs
 </Link>
 
 <Link to="/products?category=accessories&subcategory=belts">
