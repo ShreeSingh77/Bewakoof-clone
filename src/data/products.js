@@ -1996,7 +1996,8 @@ colours: [
           "/produts/women/women-trouser/trouser1.webp",
           "/produts/women/women-trouser/touser1i.webp",
           "/produts/women/women-trouser/rouser1ii.webp",
-          "/produts/women/women-trouser/trouser1.webp"
+          "/produts/women/women-trouser/trouser1.webp",
+          "/produts/women/women-trouser/trouser1i.webp"
         ],
       },
       {
@@ -2032,23 +2033,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+            "/produts/women/women-trouser/rouser2.jpg",
+          "/produts/women/women-trouser/rouser2ii.jpg",
+          "/produts/women/women-trouser/trouser2i.jpg",
+          "/produts/women/women-trouser/trouser2iii.jpg"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+         "/produts/women/women-trouser/trouser3i.webp",
+          "/produts/women/women-trouser/trouser3ii.webp",
+          "/produts/women/women-trouser/trouser3iii.webp",
+          "/produts/women/women-trouser/trouser3iv.webp"
         ],
       },
     ],
     sizes: ["28", "30", "32", "34"],
     image:
-      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/women-trouser/rouser2.jpg",
   },
 
   // Shorts
@@ -2069,23 +2072,26 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/women-shorts/shorts3.webp",
+          "/produts/women/women-shorts/shorts3i.webp",
+          "/produts/women/women-shorts/shorts3ii.webp",
+          
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/women-shorts/short2.jpg",
+          "/produts/women/women-shorts/short2i.webp",
+          "/produts/women/women-shorts/short2ii.webp",
+          "/produts/women/women-shorts/shorts2ii.webp",
+          
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/women-shorts/shorts3.webp",
   },
 
   {
@@ -2105,29 +2111,32 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/women-shorts/short4.webp",
+          "/produts/women/women-shorts/short4i.webp",
+          "/produts/women/women-shorts/short4ii.webp",
+          "/produts/women/women-shorts/short4iii.webp",
+          "/produts/women/women-shorts/short4iv.webp",
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/women-shorts/short1i.webp",
+          "/produts/women/women-shorts/women short.webp",
+          "/produts/women/women-shorts/shorts1ii.webp",
+          
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/women-shorts/short4.webp",
   },
 
   // Kurtas
   {
     id: 55,
-    name: "Women Printed Casual Kurta",
+    name: "Women Printed Casual Dress",
     brand: "Bewakoof",
     description: "Comfortable printed kurta for a stylish ethnic look.",
     category: "women",
