@@ -1,4 +1,4 @@
-import { FiHeart } from "react-icons/fi";
+import { FiHeart, FiStar } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 import { useWishlist } from "../../context/WishlistContext.jsx";
@@ -14,24 +14,6 @@ function ProductCard({ product }) {
 
   const wishlistActive = isInWishlist(product.id);
 
-  // =========================================
-  // GET PRODUCT IMAGE
-  // Priority:
-  // 1. First colour image
-  // 2. product.images[0]
-  // 3. product.image
-  // =========================================
-
-  const productImage =
-    product.colours?.[0]?.images?.[0] ||
-    product.images?.[0] ||
-    product.image ||
-    "";
-
-  // =========================================
-  // WISHLIST
-  // =========================================
-
   const handleWishlist = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -46,9 +28,7 @@ function ProductCard({ product }) {
   return (
     <article className="product-card">
 
-      {/* =========================================
-          IMAGE
-      ========================================= */}
+      {/* ================= IMAGE ================= */}
 
       <div className="product-image-wrapper">
 
@@ -56,21 +36,15 @@ function ProductCard({ product }) {
           to={`/product/${product.id}`}
           className="product-image-link"
         >
-          {productImage ? (
-            <img
-              src={productImage}
-              alt={product.name}
-              className="product-image"
-              loading="lazy"
-            />
-          ) : (
-            <div className="product-image-placeholder">
-              No Image
-            </div>
-          )}
+          <img
+            src={product.image}
+            alt={product.name}
+            className="product-image"
+            loading="lazy"
+          />
         </Link>
 
-        {/* Wishlist */}
+        {/* WISHLIST */}
 
         <button
           type="button"
@@ -89,7 +63,7 @@ function ProductCard({ product }) {
           <FiHeart />
         </button>
 
-        {/* Discount */}
+        {/* DISCOUNT */}
 
         {product.discount > 0 && (
           <span className="discount-badge">
@@ -99,15 +73,17 @@ function ProductCard({ product }) {
 
       </div>
 
-      {/* =========================================
-          PRODUCT INFO
-      ========================================= */}
+      {/* ================= INFO ================= */}
 
       <div className="product-info">
 
+        {/* BRAND */}
+
         <p className="product-brand">
-          {product.brand}
+          {product.brand || "Bewakoof"}
         </p>
+
+        {/* PRODUCT NAME */}
 
         <Link
           to={`/product/${product.id}`}
@@ -116,22 +92,35 @@ function ProductCard({ product }) {
           {product.name}
         </Link>
 
-        <p className="product-description">
-          {product.description}
-        </p>
+        {/* DESCRIPTION */}
 
-        {/* Rating */}
+        {product.description && (
+          <p className="product-description">
+            {product.description}
+          </p>
+        )}
 
-        {product.rating && (
+        {/* RATING */}
+
+        {(product.rating || product.reviews) && (
           <div className="product-rating">
-            ★ {product.rating}
-            <span>
-              ({product.reviews || 0})
+
+            <span className="rating-value">
+              {product.rating || "4.5"}
             </span>
+
+            <FiStar className="rating-star" />
+
+            {product.reviews && (
+              <span className="rating-reviews">
+                ({product.reviews})
+              </span>
+            )}
+
           </div>
         )}
 
-        {/* Price */}
+        {/* PRICE */}
 
         <div className="product-price">
 

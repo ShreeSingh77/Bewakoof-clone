@@ -1,22 +1,21 @@
-/* =========================================
+/* =====================================================
    PRODUCTS PAGE
-========================================= */
+===================================================== */
 
 .products-page-wrapper {
   width: 100%;
   min-height: 100vh;
   background: #fff;
-  color: #111;
 }
 
 
-/* =========================================
+/* =====================================================
    CATEGORY NAVIGATION
-========================================= */
+===================================================== */
 
 .products-category-nav {
   width: 100%;
-  min-height: 82px;
+  min-height: 72px;
 
   display: flex;
   align-items: center;
@@ -28,9 +27,7 @@
 }
 
 
-/* =========================================
-   GENDER TABS
-========================================= */
+/* MEN / WOMEN / ACCESSORIES */
 
 .gender-tabs {
   flex-shrink: 0;
@@ -44,27 +41,28 @@
   padding: 4px;
 
   background: #f5f5f5;
+
   border-radius: 30px;
 }
 
 .gender-tabs a {
-  min-width: 90px;
-  height: 40px;
+  min-width: 82px;
+  height: 38px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #555;
+  color: #444;
 
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
 
   text-decoration: none;
 
-  border-radius: 25px;
+  border-radius: 22px;
 
-  transition: 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .gender-tabs a:hover {
@@ -77,9 +75,9 @@
 }
 
 
-/* =========================================
+/* =====================================================
    CATEGORY SCROLL
-========================================= */
+===================================================== */
 
 .category-scroll {
   flex: 1;
@@ -88,10 +86,10 @@
   display: flex;
   align-items: center;
 
-  gap: 38px;
+  gap: 34px;
 
-  margin-left: 40px;
-  padding-right: 40px;
+  margin-left: 35px;
+  padding-right: 35px;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -108,48 +106,64 @@
 .category-scroll button {
   flex: 0 0 auto;
 
-  padding: 10px 0;
+  padding: 25px 0;
 
   border: none;
   background: transparent;
 
-  color: #222;
+  color: #333;
 
-  font-size: 13px;
+  font-family: inherit;
+
+  font-size: 12px;
   font-weight: 600;
-
-  cursor: pointer;
 
   white-space: nowrap;
 
-  transition: 0.2s ease;
+  cursor: pointer;
+
+  position: relative;
+
+  transition: color 0.2s ease;
 }
 
 .category-scroll button:hover {
-  color: #777;
+  color: #000;
 }
 
 .category-scroll button.category-active {
   color: #111;
-  font-weight: 800;
-  border-bottom: 2px solid #111;
+}
+
+.category-scroll button.category-active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 12px;
+
+  height: 2px;
+
+  background: #111;
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/* =====================================================
+   PAGE HEADER
+===================================================== */
 
 .products-header {
-  max-width: 1450px;
+  max-width: 1400px;
 
   margin: 0 auto;
 
-  padding: 55px 6% 25px;
+  padding: 50px 40px 25px;
 }
 
 .products-eyebrow {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 
   color: #777;
 
@@ -157,12 +171,16 @@
   font-weight: 700;
 
   letter-spacing: 2px;
+
+  text-transform: uppercase;
 }
 
 .products-header h1 {
   margin: 0;
 
-  font-size: 40px;
+  color: #111;
+
+  font-size: 38px;
   font-weight: 800;
 
   line-height: 1.1;
@@ -171,7 +189,7 @@
 .product-count {
   display: block;
 
-  margin-top: 12px;
+  margin-top: 10px;
 
   color: #777;
 
@@ -179,28 +197,28 @@
 }
 
 
-/* =========================================
+/* =====================================================
    MAIN LAYOUT
-========================================= */
+===================================================== */
 
 .products-layout {
-  max-width: 1450px;
+  max-width: 1400px;
 
   margin: 0 auto;
 
-  padding: 10px 6% 70px;
+  padding: 0 40px 70px;
 
   display: grid;
 
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 210px minmax(0, 1fr);
 
   gap: 35px;
 }
 
 
-/* =========================================
+/* =====================================================
    FILTER SIDEBAR
-========================================= */
+===================================================== */
 
 .products-filter-sidebar {
   width: 100%;
@@ -208,6 +226,7 @@
 
 .filter-header {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
@@ -219,7 +238,7 @@
 .filter-header h2 {
   margin: 0;
 
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
 }
 
@@ -227,24 +246,22 @@
   padding: 0;
 
   border: none;
-  background: none;
+  background: transparent;
 
-  color: #555;
+  color: #222;
 
   font-size: 10px;
   font-weight: 700;
 
+  letter-spacing: 0.5px;
+
   cursor: pointer;
 }
 
-.filter-header button:hover {
-  color: #111;
-}
 
-
-/* =========================================
+/* =====================================================
    FILTER GROUP
-========================================= */
+===================================================== */
 
 .filter-group {
   padding: 25px 0;
@@ -255,84 +272,91 @@
 .filter-group h3 {
   margin: 0 0 18px;
 
-  font-size: 14px;
+  color: #111;
+
+  font-size: 15px;
   font-weight: 800;
 }
 
 .filter-group label {
   display: flex;
+
   align-items: center;
 
   gap: 10px;
 
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 
-  color: #666;
+  color: #555;
 
   font-size: 13px;
 
   cursor: pointer;
 }
 
-.filter-group label:hover {
-  color: #111;
+.filter-group label:last-child {
+  margin-bottom: 0;
 }
 
 .filter-group input {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
+
+  margin: 0;
 
   accent-color: #111;
 
   cursor: pointer;
 }
 
-
-/* =========================================
-   MOBILE FILTER HEADER
-========================================= */
-
-.filter-mobile-header {
-  display: none;
+.filter-group label:hover span {
+  color: #111;
 }
 
 
-/* =========================================
-   RESULTS
-========================================= */
+/* =====================================================
+   PRODUCTS RESULTS
+===================================================== */
 
 .products-results {
   min-width: 0;
 }
 
 
-/* =========================================
+/* =====================================================
    TOOLBAR
-========================================= */
+===================================================== */
 
 .products-toolbar {
   min-height: 45px;
 
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
   margin-bottom: 20px;
 
-  color: #777;
+  border-bottom: 1px solid #eee;
+}
+
+.products-toolbar > span {
+  color: #555;
 
   font-size: 12px;
+  font-weight: 600;
 }
 
 .sort-wrapper {
   display: flex;
+
   align-items: center;
 
   gap: 10px;
 }
 
 .sort-wrapper label {
-  color: #555;
+  color: #777;
 
   font-size: 12px;
 }
@@ -340,13 +364,15 @@
 .sort-wrapper select {
   min-width: 145px;
 
-  padding: 9px 30px 9px 10px;
+  padding: 9px 28px 9px 10px;
 
   border: 1px solid #ddd;
 
   background: #fff;
 
-  color: #111;
+  color: #222;
+
+  font-family: inherit;
 
   font-size: 12px;
 
@@ -360,13 +386,11 @@
 }
 
 
-/* =========================================
+/* =====================================================
    PRODUCTS GRID
-========================================= */
+===================================================== */
 
 .products-grid {
-  width: 100%;
-
   display: grid;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -375,18 +399,19 @@
 }
 
 
-/* =========================================
+/* =====================================================
    NO PRODUCTS
-========================================= */
+===================================================== */
 
 .no-products {
-  min-height: 400px;
+  min-height: 300px;
 
   display: flex;
-  flex-direction: column;
 
   align-items: center;
   justify-content: center;
+
+  flex-direction: column;
 
   text-align: center;
 
@@ -394,25 +419,26 @@
 }
 
 .no-products h2 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .no-products p {
-  margin: 0 0 25px;
+  margin: 0 0 20px;
 
   color: #777;
 
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .no-products button {
-  padding: 12px 22px;
+  padding: 11px 20px;
 
   border: none;
 
   background: #111;
+
   color: #fff;
 
   font-size: 11px;
@@ -422,96 +448,174 @@
 }
 
 
-/* =========================================
+/* =====================================================
    MOBILE FILTER BUTTON
-========================================= */
+===================================================== */
 
 .mobile-filter-button {
   display: none;
 }
+
+
+/* =====================================================
+   MOBILE FILTER HEADER
+===================================================== */
+
+.filter-mobile-header {
+  display: none;
+}
+
+
+/* =====================================================
+   MOBILE APPLY
+===================================================== */
 
 .mobile-apply-filter {
   display: none;
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/* =====================================================
+   LARGE TABLET
+===================================================== */
 
 @media (max-width: 1100px) {
 
   .products-layout {
-    grid-template-columns: 190px 1fr;
+    grid-template-columns: 185px minmax(0, 1fr);
 
     gap: 25px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .products-header {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .products-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    gap: 25px 12px;
+    gap: 25px 14px;
   }
 
   .category-scroll {
     gap: 25px;
   }
-
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
-@media (max-width: 700px) {
-
-  /* Category Nav */
+@media (max-width: 800px) {
 
   .products-category-nav {
-    min-height: 58px;
-
-    overflow: hidden;
+    min-height: 60px;
   }
 
   .gender-tabs {
-    margin-left: 10px;
-
-    padding: 3px;
+    margin-left: 15px;
   }
 
   .gender-tabs a {
     min-width: 65px;
-    height: 36px;
 
-    font-size: 11px;
+    height: 34px;
+
+    font-size: 10px;
   }
 
   .category-scroll {
-    gap: 22px;
-
     margin-left: 20px;
 
-    padding-right: 25px;
-
-    overflow-x: auto;
-
-    -webkit-overflow-scrolling: touch;
+    gap: 22px;
   }
 
   .category-scroll button {
     font-size: 11px;
+
+    padding: 21px 0;
   }
 
-
-  /* Header */
-
   .products-header {
-    padding: 35px 18px 20px;
+    padding: 35px 20px 20px;
   }
 
   .products-header h1 {
     font-size: 30px;
+  }
+
+  .products-layout {
+    grid-template-columns: 170px minmax(0, 1fr);
+
+    gap: 20px;
+
+    padding: 0 20px 50px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-header h2 {
+    font-size: 18px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .products-category-nav {
+    min-height: 55px;
+  }
+
+  .gender-tabs {
+    margin-left: 8px;
+
+    padding: 3px;
+
+    gap: 2px;
+  }
+
+  .gender-tabs a {
+    min-width: 58px;
+
+    height: 32px;
+
+    font-size: 9px;
+  }
+
+  .category-scroll {
+    margin-left: 15px;
+
+    gap: 20px;
+
+    padding-right: 20px;
+  }
+
+  .category-scroll button {
+    padding: 19px 0;
+
+    font-size: 10px;
+  }
+
+  .category-scroll button.category-active::after {
+    bottom: 8px;
+  }
+
+
+  /* HEADER */
+
+  .products-header {
+    padding: 28px 15px 18px;
   }
 
   .products-eyebrow {
@@ -520,15 +624,23 @@
     letter-spacing: 1.5px;
   }
 
+  .products-header h1 {
+    font-size: 26px;
+  }
 
-  /* Filter Button */
+  .product-count {
+    font-size: 11px;
+  }
+
+
+  /* MOBILE FILTER BUTTON */
 
   .mobile-filter-button {
     display: block;
 
-    width: calc(100% - 36px);
+    width: calc(100% - 30px);
 
-    margin: 0 18px 20px;
+    margin: 0 15px 18px;
 
     padding: 13px;
 
@@ -538,56 +650,54 @@
 
     color: #111;
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
+
+    letter-spacing: 1px;
 
     cursor: pointer;
   }
 
 
-  /* Layout */
+  /* LAYOUT */
 
   .products-layout {
     display: block;
 
-    padding: 0 18px 50px;
+    padding: 0 15px 40px;
   }
 
 
-  /* Sidebar */
+  /* SIDEBAR */
 
   .products-filter-sidebar {
     position: fixed;
 
     top: 0;
-    left: -100%;
+    left: 0;
 
-    z-index: 9999;
-
-    width: 85%;
-    max-width: 360px;
-
+    width: 100%;
     height: 100vh;
 
     padding: 20px;
 
     background: #fff;
 
+    z-index: 1000;
+
     overflow-y: auto;
 
-    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+    transform: translateX(-100%);
 
-    transition: left 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
   .products-filter-sidebar.mobile-filter-open {
-    left: 0;
+    transform: translateX(0);
   }
 
 
-  .filter-header {
-    display: none;
-  }
+  /* MOBILE HEADER */
 
   .filter-mobile-header {
     display: flex;
@@ -595,7 +705,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding-bottom: 20px;
+    padding-bottom: 18px;
 
     border-bottom: 1px solid #ddd;
   }
@@ -603,7 +713,7 @@
   .filter-mobile-header h2 {
     margin: 0;
 
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .filter-mobile-header button {
@@ -614,26 +724,41 @@
 
     background: #f5f5f5;
 
-    font-size: 22px;
+    font-size: 25px;
 
     cursor: pointer;
   }
 
 
-  /* Apply */
+  /* DESKTOP HEADER HIDE */
+
+  .filter-header {
+    display: none;
+  }
+
+
+  /* FILTER */
+
+  .filter-group {
+    padding: 22px 0;
+  }
+
+
+  /* APPLY */
 
   .mobile-apply-filter {
     display: block;
 
     width: 100%;
 
-    margin-top: 25px;
+    margin-top: 20px;
 
     padding: 14px;
 
     border: none;
 
     background: #111;
+
     color: #fff;
 
     font-size: 12px;
@@ -643,14 +768,20 @@
   }
 
 
-  /* Toolbar */
+  /* TOOLBAR */
 
   .products-toolbar {
+    min-height: 45px;
+
     margin-bottom: 15px;
   }
 
   .products-toolbar > span {
     font-size: 11px;
+  }
+
+  .sort-wrapper {
+    gap: 5px;
   }
 
   .sort-wrapper label {
@@ -660,41 +791,45 @@
   .sort-wrapper select {
     min-width: 125px;
 
-    font-size: 11px;
+    padding: 8px;
+
+    font-size: 10px;
   }
 
 
-  /* Grid */
+  /* GRID */
 
   .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 25px 10px;
+    gap: 24px 10px;
   }
-
 }
 
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
 
   .gender-tabs a {
-    min-width: 58px;
+    min-width: 52px;
+  }
+
+  .category-scroll {
+    gap: 15px;
+  }
+
+  .category-scroll button {
+    font-size: 9px;
   }
 
   .products-header h1 {
-    font-size: 26px;
+    font-size: 23px;
   }
 
   .products-grid {
     gap: 20px 8px;
   }
-
-  .sort-wrapper select {
-    min-width: 110px;
-  }
-
 }
