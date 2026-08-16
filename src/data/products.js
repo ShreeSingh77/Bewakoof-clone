@@ -2273,20 +2273,27 @@ colours: [
         name: "Blue",
         images: [
           
+          "/produts/women/dress/dress4i.webp",
+          "/produts/women/dress/dress4ii.webp",
+          "/produts/women/dress/dress4iii.webp",
+          "/produts/women/dress/dress4iv.webp",
+          "/produts/women/dress/dress4v.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+           "/produts/women/dress/dress3.webp",
+          "/produts/women/dress/dress3i.webp",
+          "/produts/women/dress/dress3ii.webp",
+          "/produts/women/dress/dress3iii.webp",
+          "/produts/women/dress/dress3iv.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/dress/dress4i.webp",
   },
 
   // Co-ords
@@ -2307,7 +2314,7 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
+          "/produts/women/co-ord-set/top2.webp",
           "/produts/women/women-top/top2i.webp",
           "/produts/women/women-top/top2ii.webp",
         ],
