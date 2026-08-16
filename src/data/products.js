@@ -1916,23 +1916,26 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+            "/produts/women/women-jeans/joggers2.webp",
+          "/produts/women/women-jeans/joggers2i.webp",
+          "/produts/women/women-jeans/joggers2ii.webp",
+          "/produts/women/women-jeans/joggers2iii.webp"
+          
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/women-jeans/joggers1.webp",
+          "/produts/women/women-jeans/joggers1i.webp",
+          "/produts/women/women-jeans/joggers1i.webp",
+          "/produts/women/women-jeans/joggers1iii.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.bewakoof.com/t1080/women-s-beige-oversized-plus-size-cargo-joggers-585694-1756986851-1.jpg",
+      "/produts/women/women-jeans/joggers2.webp",
   },
 {
     id: 50,
@@ -1951,23 +1954,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/women-jeans/joggers1.webp",
+          "/produts/women/women-jeans/joggers1i.webp",
+          "/produts/women/women-jeans/joggers1i.webp",
+          "/produts/women/women-jeans/joggers1iii.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+           "/produts/women/women-joggers/joggers2.webp",
+          "/produts/women/women-joggers/joggers2i.webp",
+          "/produts/women/women-joggers/joggers2ii.webp",
+          "/produts/women/women-joggers/joggers2iii.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.bewakoof.com/t1080/580425_2026-05-04t12-32-18_1.jpg",
+      "/produts/women/women-jeans/joggers1.webp",
   },
 
   // Trousers
@@ -1988,27 +1993,26 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/women-trouser/trouser1.webp",
+          "/produts/women/women-trouser/touser1i.webp",
+          "/produts/women/women-trouser/rouser1ii.webp",
+          "/produts/women/women-trouser/trouser1.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/women-trouser/trouser4.jpg",
+          "/produts/women/women-trouser/trouser4i.jpg",
+          "/produts/women/women-trouser/trouser4ii.jpg",
+          "/produts/women/women-trouser/trouser4iii.jpg"
         ],
       },
     ],
     sizes: ["28", "30", "32", "34"],
-    images:[
-      "https://images.bewakoof.com/t640/women-s-camel-brown-wide-leg-track-pants-654853-1754479994-1.jpg",
-      "https://images.bewakoof.com/t1080/women-s-camel-brown-wide-leg-pants-654853-1736336895-2.jpg",
-      "https://images.bewakoof.com/t1080/women-s-camel-brown-wide-leg-pants-654853-1736336900-4.jpg",
-      "https://images.bewakoof.com/t1080/women-s-camel-brown-wide-leg-pants-654853-1736336908-6.jpg"
-    ],
+    image:
+     "/produts/women/women-trouser/trouser1.webp"
+    ,
     },
 
   {
