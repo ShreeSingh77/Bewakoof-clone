@@ -2151,25 +2151,68 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/kurtas/kurta1.webp",
+          "/produts/women/kurtas/kurta1i.webp",
+          "/produts/women/kurtas/kurta1ii.webp",
+          "/produts/women/kurtas/kurta1iii.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/kurtas/kurta2.webp",
+          "/produts/women/kurtas/kurta2i.webp",
+          "/produts/women/kurtas/kurta2ii.webp",
+          "/produts/women/kurtas/kurta2ii.webp",
+          "/produts/women/kurtas/kurta2iiii.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfdimlsK4-LKURqv1wiR4krSF8HiOVVg2jQQgg2TIT9da6Wgc241HYj99SUSkOYt2EHgNkn-g3ZuWfCuI43n07mpc3sKgmc8IdsILbg6UzV1f0fEpyZJQzkVo",
+      "/produts/women/kurtas/kurta1.webp",
   },
 
+  {
+    id: 55,
+    name: "Women Printed Casual Dress",
+    brand: "Bewakoof",
+    description: "Comfortable printed kurta for a stylish ethnic look.",
+    category: "women",
+    subCategory: "kurtas",
+    price: 899,
+    originalPrice: 1799,
+    discount: 50,
+    rating: 4.6,
+    reviews: 84,
+    material: "Cotton",
+    colours: [
+      {
+        name: "Blue",
+        images: [
+
+          "/produts/women/kurtas/kurta2.webp",
+          "/produts/women/kurtas/kurta2i.webp",
+          "/produts/women/kurtas/kurta2ii.webp",
+          "/produts/women/kurtas/kurta2ii.webp",
+          "/produts/women/kurtas/kurta2iiii.webp"
+         
+        ],
+      },
+      {
+        name: "White",
+        images: [
+           "/produts/women/kurtas/kurta1.webp",
+          "/produts/women/kurtas/kurta1i.webp",
+          "/produts/women/kurtas/kurta1ii.webp",
+          "/produts/women/kurtas/kurta1iii.webp"
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    image:
+      "/produts/women/kurtas/kurta2.webp",
+  },
   
 
   // Dresses
@@ -2190,23 +2233,26 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/dress/dress1.webp",
+          "/produts/women/dress/dress1i.webp",
+          "/produts/women/dress/dress1ii.webp",
+          "/produts/women/dress/dress1iii.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/dress/dress2.webp",
+          "/produts/women/dress/dress2i.webp",
+          "/produts/women/dress/dress2ii.webp",
+          "/produts/women/dress/dress2iii.webp",
+          "/produts/women/dress/dress2iv.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/dress/dress1.webp",
   },
 
   {
@@ -2226,9 +2272,7 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          
         ],
       },
       {
