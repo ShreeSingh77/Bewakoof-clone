@@ -2314,23 +2314,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/co-ord-set/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/co-ord-set/co-ords1.jpg",
+          "/produts/women/co-ord-set/co-ords1i.jpg",
+          "/produts/women/co-ord-set/co-ords1ii.jpg",
+          "/produts/women/co-ord-set/co-ords1iii.jpg"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/co-ord-set/co-ords2.webp",
+          "/produts/women/co-ord-set/co-ords2i.webp",
+          "/produts/women/co-ord-set/co-ords2ii.webp",
+          "/produts/women/co-ord-set/co-ords2ii.webp"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/co-ord-set/co-ords1.jpg",
   },
 
   {
@@ -2350,23 +2352,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/women/co-ord-set/co-ords2.webp",
+          "/produts/women/co-ord-set/co-ords2i.webp",
+          "/produts/women/co-ord-set/co-ords2ii.webp",
+          "/produts/women/co-ord-set/co-ords2ii.webp"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/women/co-ord-set/co-ords1.jpg",
+          "/produts/women/co-ord-set/co-ords1i.jpg",
+          "/produts/women/co-ord-set/co-ords1ii.jpg",
+          "/produts/women/co-ord-set/co-ords1iii.jpg"
         ],
       },
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1496217590455-aa63a8350eea?auto=format&fit=crop&w=800&q=80",
+      "/produts/women/co-ord-set/co-ords2.webp",
   },
 
   // ==================== ACCESSORIES ====================
@@ -2389,23 +2393,25 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/accessories/caps/caps4.jpg",
+          "/produts/accessories/caps/caps4i.jpg",
+          "/produts/accessories/caps/caps4ii.jpg",
+          "/produts/accessories/caps/caps4iii.webp",
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/accessories/caps/caps3.webp",
+          "/produts/accessories/caps/cap3i.webp",
+          "/produts/accessories/caps/caps3ii.webp",
+          "/produts/accessories/caps/caps3iii.webp",
         ],
       },
     ],
     sizes: ["Free Size"],
     image:
-      "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/caps/caps4.jpg",
   },
 
  {
@@ -2425,25 +2431,27 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/accessories/caps/caps1i.webp",
+          "/produts/accessories/caps/caps1ii.webp",
+          "/produts/accessories/caps/caps.webp",
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+         "/produts/accessories/caps/caps2.jpg",
+          "/produts/accessories/caps/caps2i.jpg",
+          "/produts/accessories/caps/caps2ii.jpg",
+         
         ],
       },
     ],
     sizes: ["Free Size"],
     image:
-      "https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/caps/caps.webp",
   },
 
+ 
   // Bags
   {
     id: 63,
@@ -2462,23 +2470,24 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+          "/produts/accessories/backpack/backpack2i.webp",
+          "/produts/accessories/backpack/backpack2.webp",
+          "/produts/accessories/backpack/backpack2ii.webp",
+         
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+            "/produts/accessories/backpack/backpack1.webp",
+          "/produts/accessories/backpack/backpack1i.jpg",
+          "/produts/accessories/backpack/backpack1ii.jpg",
         ],
       },
     ],
     sizes: ["Free Size"],
     image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "/produts/accessories/backpack/backpack2i.webp",
   },
 
   {
@@ -2498,23 +2507,24 @@ colours: [
       {
         name: "Blue",
         images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
+           "/produts/accessories/backpack/backpack3.jpg",
+          "/produts/accessories/backpack/backpack3ii.jpg",
+          "/produts/accessories/backpack/backpack3iii.jpg",
+          "/produts/accessories/backpack/backpack3iv.jpg"
         ],
       },
       {
         name: "White",
         images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
+          "/produts/accessories/backpack/backpack2.webp",
+          "/produts/accessories/backpack/backpack2i.webp",
+          "/produts/accessories/backpack/backpack2ii.webp",
         ],
       },
     ],
     sizes: ["Free Size"],
     image:
-       "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+       "/produts/accessories/backpack/backpack3.jpg",
   },
 
   // Wallets
