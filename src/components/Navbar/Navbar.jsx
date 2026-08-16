@@ -357,9 +357,7 @@ function Navbar() {
   clogs
 </Link>
 
-<Link to="/products?category=accessories&subcategory=belts">
-  Belts
-</Link>
+
 
                 </div>
 

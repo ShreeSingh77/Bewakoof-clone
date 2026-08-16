@@ -2623,78 +2623,7 @@ colours: [
     "/produts/accessories/clogs/clogs4.jpg",
 },
 
-  // Belts
-  {
-    id: 67,
-    name: "Classic Black Casual Belt",
-    brand: "Bewakoof",
-    description: "Classic black belt with a minimal everyday design.",
-    category: "accessories",
-    subCategory: "belts",
-    price: 499,
-    originalPrice: 999,
-    discount: 50,
-    rating: 4.5,
-    reviews: 58,
-    material: "Faux Leather",
-    colours: [
-      {
-        name: "Blue",
-        images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
-        ],
-      },
-      {
-        name: "White",
-        images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
-        ],
-      },
-    ],
-    sizes: ["Free Size"],
-    image:
-      "https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=800&q=80",
-  },
-
-  {
-    id: 68,
-    name: "Brown Casual Leather Belt",
-    brand: "Bewakoof",
-    description: "Classic brown belt for smart casual outfits.",
-    category: "accessories",
-    subCategory: "belts",
-    price: 549,
-    originalPrice: 1099,
-    discount: 50,
-    rating: 4.6,
-    reviews: 71,
-    material: "Faux Leather",
-    colours: [
-      {
-        name: "Blue",
-        images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
-        ],
-      },
-      {
-        name: "White",
-        images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
-        ],
-      },
-    ],
-    sizes: ["Free Size"],
-    image:
-      "",
-  },
+ 
 ];
      
 
