@@ -2170,41 +2170,7 @@ colours: [
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfdimlsK4-LKURqv1wiR4krSF8HiOVVg2jQQgg2TIT9da6Wgc241HYj99SUSkOYt2EHgNkn-g3ZuWfCuI43n07mpc3sKgmc8IdsILbg6UzV1f0fEpyZJQzkVo",
   },
 
-  {
-    id: 56,
-    name: "Women Floral Cotton Kurta",
-    brand: "Bewakoof",
-    description: "Floral cotton kurta with a comfortable everyday fit.",
-    category: "women",
-    subCategory: "kurtas",
-    price: 949,
-    originalPrice: 1899,
-    discount: 50,
-    rating: 4.7,
-    reviews: 92,
-    material: "Cotton",
-    colours: [
-      {
-        name: "Blue",
-        images: [
-          "/produts/women/women-top/top2.webp",
-          "/produts/women/women-top/top2i.webp",
-          "/produts/women/women-top/top2ii.webp",
-        ],
-      },
-      {
-        name: "White",
-        images: [
-          "/produts/women/women-top/top3.jpg",
-          "/produts/women/women-top/top3ii.webp",
-          "/produts/women/women-top/top3iii.webp",
-        ],
-      },
-    ],
-    sizes: ["S", "M", "L", "XL"],
-    image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
-  },
+  
 
   // Dresses
   {
