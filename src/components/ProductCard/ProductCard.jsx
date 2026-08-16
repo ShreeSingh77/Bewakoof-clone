@@ -6,20 +6,33 @@ import { useWishlist } from "../../context/WishlistContext.jsx";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
-
   const {
     addToWishlist,
     removeFromWishlist,
     isInWishlist,
   } = useWishlist();
 
-
   const wishlistActive = isInWishlist(product.id);
 
+  // =========================================
+  // GET PRODUCT IMAGE
+  // Priority:
+  // 1. First colour image
+  // 2. product.images[0]
+  // 3. product.image
+  // =========================================
+
+  const productImage =
+    product.colours?.[0]?.images?.[0] ||
+    product.images?.[0] ||
+    product.image ||
+    "";
+
+  // =========================================
+  // WISHLIST
+  // =========================================
 
   const handleWishlist = (e) => {
-
-    // Product details page par navigation na ho
     e.preventDefault();
     e.stopPropagation();
 
@@ -30,28 +43,37 @@ function ProductCard({ product }) {
     }
   };
 
-
   return (
-    <div className="product-card">
+    <article className="product-card">
 
-      {/* ================= IMAGE ================= */}
+      {/* =========================================
+          IMAGE
+      ========================================= */}
 
       <div className="product-image-wrapper">
 
-        <Link to={`/product/${product.id}`}>
-
-          <img
-            src={product.image}
-            alt={product.name}
-            className="product-image"
-          />
-
+        <Link
+          to={`/product/${product.id}`}
+          className="product-image-link"
+        >
+          {productImage ? (
+            <img
+              src={productImage}
+              alt={product.name}
+              className="product-image"
+              loading="lazy"
+            />
+          ) : (
+            <div className="product-image-placeholder">
+              No Image
+            </div>
+          )}
         </Link>
 
-
-        {/* ================= WISHLIST ================= */}
+        {/* Wishlist */}
 
         <button
+          type="button"
           className={`wishlist-button ${
             wishlistActive
               ? "wishlist-button-active"
@@ -64,24 +86,28 @@ function ProductCard({ product }) {
               : "Add to wishlist"
           }
         >
-
           <FiHeart />
-
         </button>
 
+        {/* Discount */}
 
-        {/* ================= DISCOUNT ================= */}
-
-        <span className="discount-badge">
-          {product.discount}% OFF
-        </span>
+        {product.discount > 0 && (
+          <span className="discount-badge">
+            {product.discount}% OFF
+          </span>
+        )}
 
       </div>
 
-
-      {/* ================= PRODUCT INFO ================= */}
+      {/* =========================================
+          PRODUCT INFO
+      ========================================= */}
 
       <div className="product-info">
+
+        <p className="product-brand">
+          {product.brand}
+        </p>
 
         <Link
           to={`/product/${product.id}`}
@@ -90,11 +116,22 @@ function ProductCard({ product }) {
           {product.name}
         </Link>
 
-
         <p className="product-description">
           {product.description}
         </p>
 
+        {/* Rating */}
+
+        {product.rating && (
+          <div className="product-rating">
+            ★ {product.rating}
+            <span>
+              ({product.reviews || 0})
+            </span>
+          </div>
+        )}
+
+        {/* Price */}
 
         <div className="product-price">
 
@@ -102,19 +139,23 @@ function ProductCard({ product }) {
             ₹{product.price}
           </span>
 
-          <span className="original-price">
-            ₹{product.originalPrice}
-          </span>
+          {product.originalPrice && (
+            <span className="original-price">
+              ₹{product.originalPrice}
+            </span>
+          )}
 
-          <span className="discount-text">
-            {product.discount}% OFF
-          </span>
+          {product.discount > 0 && (
+            <span className="discount-text">
+              {product.discount}% OFF
+            </span>
+          )}
 
         </div>
 
       </div>
 
-    </div>
+    </article>
   );
 }
 

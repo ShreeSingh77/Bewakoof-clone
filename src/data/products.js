@@ -92,7 +92,7 @@ const products = [
     brand: "Bewakoof",
     description: "Relaxed shirt made for everyday comfort.",
     category: "men",
-    subCategory: "Shirts",
+    subCategory: "shirts",
 
     price: 699,
     originalPrice: 1499,
@@ -518,7 +518,7 @@ const products = [
     brand: "Bewakoof",
     description: "Comfortable Polo designed for a relaxed casual look.",
     category: "men",
-    subCategory: "t-shirt",
+    subCategory: "t-shirts",
 
     price: 899,
     originalPrice: 1799,
