@@ -406,129 +406,114 @@ function Profile() {
 
           {/* ================= QUICK LINKS ================= */}
 
-          <div className="profile-section">
+        {/* ================= QUICK LINKS ================= */}
 
-            <h2>
-              Quick Links
-            </h2>
+<div className="profile-section">
 
+  <h2>
+    Quick Links
+  </h2>
 
-            <div className="profile-quick-grid">
+  <div className="profile-quick-grid">
 
-              {/* ORDERS */}
+    {/* ORDERS */}
 
-              <Link
-                to="/orders"
-                className="quick-card"
-              >
-                <FiPackage />
+    {/* ADDRESS */}
 
-                <div>
+<Link
+  to="/addresses"
+  className="quick-card"
+>
+  <FiMapPin />
 
-                  <strong>
-                    My Orders
-                  </strong>
+  <div>
+    <strong>
+      Saved Addresses
+    </strong>
 
-                  <p>
-                    Track and manage your orders
-                  </p>
+    <p>
+      Manage your delivery addresses
+    </p>
+  </div>
 
-                </div>
-
-                <FiChevronRight />
-
-              </Link>
-
-
-              {/* WISHLIST */}
-
-              <Link
-                to="/wishlist"
-                className="quick-card"
-              >
-                <FiHeart />
-
-                <div>
-
-                  <strong>
-                    My Wishlist
-                  </strong>
-
-                  <p>
-                    View your saved products
-                  </p>
-
-                </div>
-
-                <FiChevronRight />
-
-              </Link>
+  <FiChevronRight />
+</Link>
 
 
-              {/* BAG */}
+    {/* WISHLIST */}
 
-              <Link
-                to="/cart"
-                className="quick-card"
-              >
-                <FiShoppingBag />
+    <Link
+      to="/wishlist"
+      className="quick-card"
+    >
+      <FiHeart />
 
-                <div>
+      <div>
+        <strong>
+          My Wishlist
+        </strong>
 
-                  <strong>
-                    My Bag
-                  </strong>
-
-                  <p>
-                    Continue shopping
-                  </p>
-
-                </div>
-
-                <FiChevronRight />
-
-              </Link>
-
-
-              {/* ADDRESS */}
-
-              <button
-                type="button"
-                className="quick-card quick-card-button"
-                onClick={() => {
-                  alert(
-                    "Address management will be available here."
-                  );
-                }}
-              >
-
-                <FiMapPin />
-
-                <div>
-
-                  <strong>
-                    Saved Addresses
-                  </strong>
-
-                  <p>
-                    Manage your delivery addresses
-                  </p>
-
-                </div>
-
-                <FiChevronRight />
-
-              </button>
-
-            </div>
-
-          </div>
-
-        </section>
-
+        <p>
+          View your saved products
+        </p>
       </div>
 
-    </main>
+      <FiChevronRight />
+    </Link>
+
+
+    {/* BAG */}
+
+    <Link
+      to="/cart"
+      className="quick-card"
+    >
+      <FiShoppingBag />
+
+      <div>
+        <strong>
+          My Bag
+        </strong>
+
+        <p>
+          Continue shopping
+        </p>
+      </div>
+
+      <FiChevronRight />
+    </Link>
+
+
+    {/* ADDRESS */}
+
+    <Link
+      to="/addresses"
+      className="quick-card"
+    >
+      <FiMapPin />
+
+      <div>
+        <strong>
+          Saved Addresses
+        </strong>
+
+        <p>
+          Manage your delivery addresses
+        </p>
+      </div>
+
+      <FiChevronRight />
+    </Link>
+
+  </div>
+
+</div>
+
+</section>
+
+</div>
+
+</main>
   );
 }
 

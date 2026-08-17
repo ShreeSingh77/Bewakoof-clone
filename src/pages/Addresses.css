@@ -1,0 +1,839 @@
+/* =========================================
+   ADDRESSES PAGE
+========================================= */
+
+.addresses-page {
+  min-height: 100vh;
+  background: #f7f7f7;
+  padding: 42px 5% 70px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.addresses-header {
+  max-width: 1250px;
+  margin: 0 auto 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.addresses-header h1 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.addresses-header p {
+  margin: 8px 0 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ADD ADDRESS BUTTON
+========================================= */
+
+.add-address-btn {
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 20px;
+
+  border: 1px solid #111;
+
+  background: #111;
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-address-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.add-address-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+
+/* =========================================
+   ADDRESS FORM
+========================================= */
+
+.address-form {
+  max-width: 1250px;
+
+  margin: 0 auto 25px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border: 1px solid #e2e2e2;
+}
+
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.address-form-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 24px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.address-form-header h2 {
+  margin: 0 0 6px;
+
+  color: #111;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.address-form-header p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close-address-form {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #ddd;
+
+  background: #fff;
+
+  color: #555;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.close-address-form svg {
+  width: 17px;
+  height: 17px;
+}
+
+.close-address-form:hover {
+  border-color: #111;
+  background: #111;
+  color: #fff;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.address-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px 18px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.address-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.address-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.address-form-group label {
+  margin-bottom: 8px;
+
+  color: #333;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.address-form-group input,
+.address-form-group textarea,
+.address-form-group select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d6d6d6;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #222;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition: border-color 0.2s ease;
+}
+
+.address-form-group input,
+.address-form-group select {
+  height: 44px;
+
+  padding: 0 13px;
+}
+
+.address-form-group textarea {
+  min-height: 90px;
+
+  padding: 12px 13px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.address-form-group input::placeholder,
+.address-form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.address-form-group input:focus,
+.address-form-group textarea:focus,
+.address-form-group select:focus {
+  border-color: #111;
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.address-form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #eee;
+}
+
+.address-cancel-btn,
+.address-save-btn {
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.address-cancel-btn {
+  background: #f1f1f1;
+
+  color: #333;
+}
+
+.address-cancel-btn:hover {
+  background: #e5e5e5;
+}
+
+.address-save-btn {
+  background: #111;
+
+  color: #fff;
+}
+
+.address-save-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.address-save-btn:hover {
+  background: #333;
+}
+
+
+/* =========================================
+   ADDRESS LIST
+========================================= */
+
+.addresses-list {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* =========================================
+   ADDRESS CARD
+========================================= */
+
+.address-card {
+  background: #fff;
+
+  border: 1px solid #e2e2e2;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.address-card:hover {
+  border-color: #bbb;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ADDRESS CARD HEADER
+========================================= */
+
+.address-card-header {
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 15px 18px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #eee;
+}
+
+
+/* =========================================
+   ADDRESS TYPE
+========================================= */
+
+.address-type {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.address-type svg {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  color: #222;
+}
+
+.address-type strong {
+  color: #222;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.address-type span {
+  padding: 4px 7px;
+
+  background: #111;
+
+  color: #fff;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   CARD ACTIONS
+========================================= */
+
+.address-card-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.address-card-actions button {
+  height: 30px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 8px;
+
+  border: 1px solid #ddd;
+
+  background: #fff;
+
+  color: #555;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.address-card-actions button svg {
+  width: 13px;
+  height: 13px;
+}
+
+.address-card-actions button:hover {
+  border-color: #111;
+
+  background: #111;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   ADDRESS BODY
+========================================= */
+
+.address-card-body {
+  padding: 20px 18px;
+}
+
+.address-card-body h3 {
+  margin: 0 0 10px;
+
+  color: #111;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.address-card-body p {
+  margin: 0 0 6px;
+
+  color: #555;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.address-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.address-card-body .address-mobile {
+  margin-top: 12px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   DEFAULT FOOTER
+========================================= */
+
+.address-card-footer {
+  padding: 0 18px 18px;
+}
+
+.address-card-footer button {
+  height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid #111;
+
+  background: #fff;
+
+  color: #111;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.address-card-footer button:hover {
+  background: #111;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.addresses-empty {
+  max-width: 600px;
+
+  margin: 40px auto 0;
+
+  padding: 50px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border: 1px solid #e2e2e2;
+}
+
+.addresses-empty-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: #f1f1f1;
+
+  color: #222;
+}
+
+.addresses-empty-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.addresses-empty h2 {
+  margin: 0 0 8px;
+
+  color: #111;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.addresses-empty p {
+  max-width: 400px;
+
+  margin: 0 0 22px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .addresses-page {
+    padding: 35px 4% 55px;
+  }
+
+  .addresses-header h1 {
+    font-size: 28px;
+  }
+
+  .address-form {
+    padding: 23px;
+  }
+
+  .addresses-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .addresses-page {
+    padding: 25px 15px 45px;
+  }
+
+  .addresses-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+  }
+
+  .addresses-header h1 {
+    font-size: 25px;
+  }
+
+  .addresses-header p {
+    font-size: 12px;
+  }
+
+  .addresses-header .add-address-btn {
+    width: 100%;
+  }
+
+
+  /* Form */
+
+  .address-form {
+    padding: 19px 16px;
+  }
+
+  .address-form-header {
+    padding-bottom: 17px;
+
+    margin-bottom: 20px;
+  }
+
+  .address-form-header h2 {
+    font-size: 18px;
+  }
+
+  .address-form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .address-form-group.full-width {
+    grid-column: auto;
+  }
+
+  .address-form-actions {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .address-cancel-btn,
+  .address-save-btn {
+    width: 100%;
+  }
+
+
+  /* Address list */
+
+  .addresses-list {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .address-card-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 14px 15px;
+
+    gap: 12px;
+  }
+
+  .address-card-actions {
+    width: 100%;
+  }
+
+  .address-card-actions button {
+    flex: 1;
+
+    height: 34px;
+  }
+
+  .address-card-body {
+    padding: 17px 15px;
+  }
+
+  .address-card-footer {
+    padding: 0 15px 15px;
+  }
+
+
+  /* Empty */
+
+  .addresses-empty {
+    margin-top: 25px;
+
+    padding: 40px 18px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .addresses-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .addresses-header h1 {
+    font-size: 23px;
+  }
+
+  .address-form {
+    padding: 17px 14px;
+  }
+
+  .address-form-group input,
+  .address-form-group select {
+    height: 42px;
+  }
+
+  .address-form-group textarea {
+    min-height: 80px;
+  }
+
+  .address-card-body h3 {
+    font-size: 14px;
+  }
+
+  .address-card-body p {
+    font-size: 11px;
+  }
+
+  .address-type strong {
+    font-size: 12px;
+  }
+
+  .address-type span {
+    font-size: 7px;
+  }
+
+  .addresses-empty h2 {
+    font-size: 18px;
+  }
+}
