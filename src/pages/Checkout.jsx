@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiChevronDown, FiShield } from "react-icons/fi";
 import { useCart } from "../context/CartContext";
@@ -5,6 +7,18 @@ import "./Checkout.css";
 
 function Checkout() {
   const { cartItems } = useCart();
+
+const [address, setAddress] = useState({
+  name: "",
+  phone: "",
+  address: "",
+  city: "",
+  state: "",
+  pincode: "",
+});
+
+const [showAddressForm, setShowAddressForm] = useState(false);
+const [addressError, setAddressError] = useState("");
 
   // ================= TOTALS =================
 
@@ -83,9 +97,13 @@ function Checkout() {
                 </div>
               </div>
 
-              <button className="change-btn">
-                ADD NEW ADDRESS
-              </button>
+              <button
+  type="button"
+  className="change-btn"
+  onClick={() => setShowAddressForm(true)}
+>
+  ADD NEW ADDRESS
+</button>
 
             </div>
 
@@ -113,13 +131,150 @@ function Checkout() {
                   with your order.
                 </p>
 
-                <button className="add-address-btn">
-                  ADD ADDRESS
-                </button>
+                <button
+  type="button"
+  className="add-address-btn"
+  onClick={() => setShowAddressForm(true)}
+>
+  ADD ADDRESS
+</button>
 
               </div>
 
             </div>
+          
+          {showAddressForm && (
+  <div className="address-form">
+
+    <input
+      type="text"
+      placeholder="Full Name"
+      value={address.name}
+      onChange={(e) =>
+        setAddress({
+          ...address,
+          name: e.target.value,
+        })
+      }
+    />
+
+    <input
+      type="tel"
+      placeholder="Phone Number"
+      value={address.phone}
+      onChange={(e) =>
+        setAddress({
+          ...address,
+          phone: e.target.value,
+        })
+      }
+    />
+
+    <textarea
+      placeholder="Full Address"
+      value={address.address}
+      onChange={(e) =>
+        setAddress({
+          ...address,
+          address: e.target.value,
+        })
+      }
+    />
+
+    <div className="address-row">
+
+      <input
+        type="text"
+        placeholder="City"
+        value={address.city}
+        onChange={(e) =>
+          setAddress({
+            ...address,
+            city: e.target.value,
+          })
+        }
+      />
+
+      <input
+        type="text"
+        placeholder="State"
+        value={address.state}
+        onChange={(e) =>
+          setAddress({
+            ...address,
+            state: e.target.value,
+          })
+        }
+      />
+
+      <input
+        type="text"
+        placeholder="Pincode"
+        value={address.pincode}
+        onChange={(e) =>
+          setAddress({
+            ...address,
+            pincode: e.target.value,
+          })
+        }
+      />
+
+    </div>
+
+    {addressError && (
+      <p className="address-error">
+        {addressError}
+      </p>
+    )}
+
+    <button
+      type="button"
+      className="save-address-btn"
+      onClick={() => {
+
+        if (
+          !address.name ||
+          !address.phone ||
+          !address.address ||
+          !address.city ||
+          !address.state ||
+          !address.pincode
+        ) {
+          setAddressError(
+            "Please fill all address details."
+          );
+          return;
+        }
+
+        if (
+          !/^[0-9]{10}$/.test(address.phone)
+        ) {
+          setAddressError(
+            "Please enter a valid 10-digit phone number."
+          );
+          return;
+        }
+
+        if (
+          !/^[0-9]{6}$/.test(address.pincode)
+        ) {
+          setAddressError(
+            "Please enter a valid 6-digit pincode."
+          );
+          return;
+        }
+
+        setAddressError("");
+        setShowAddressForm(false);
+
+      }}
+    >
+      SAVE ADDRESS
+    </button>
+
+  </div>
+)}
+
 
           </div>
 
@@ -383,9 +538,31 @@ function Checkout() {
 
           {/* PLACE ORDER */}
 
-          <button className="place-order-btn">
-            PLACE ORDER
-          </button>
+          <button
+  type="button"
+  className="place-order-btn"
+  onClick={() => {
+
+    if (
+      !address.name ||
+      !address.phone ||
+      !address.address ||
+      !address.city ||
+      !address.state ||
+      !address.pincode
+    ) {
+      setShowAddressForm(true);
+      setAddressError(
+        "Please add your delivery address before placing the order."
+      );
+      return;
+    }
+
+    alert("Order placed successfully!");
+  }}
+>
+  PLACE ORDER
+</button>
 
 
           <div className="checkout-security">

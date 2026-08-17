@@ -55,78 +55,54 @@ export function CartProvider({ children }) {
   // ADD TO CART
   // ===============================
 
-  const addToCart = (
-    product,
-    size,
-    colour
-  ) => {
+  const addToCart = (product, size, colour) => {
+  // Size validation
+  if (product.sizes?.length > 0 && !size) {
+    alert("Please select a size");
+    return;
+  }
 
-    if (!size) {
+  // Colour validation
+  if (product.colours?.length > 0 && !colour) {
+    alert("Please select a colour");
+    return;
+  }
 
-      alert("Please select a size");
+  const cartId = `${product.id}-${size || "no-size"}-${colour || "no-colour"}`;
 
-      return;
+  setCartItems((prevItems) => {
+    const existingItem = prevItems.find(
+      (item) => item.cartId === cartId
+    );
+
+    // Same product + same size + same colour
+    // => increase quantity
+    if (existingItem) {
+      return prevItems.map((item) =>
+        item.cartId === cartId
+          ? {
+              ...item,
+              quantity: item.quantity + 1,
+            }
+          : item
+      );
     }
 
+    // New cart item
+    return [
+      ...prevItems,
+      {
+        ...product,
+        selectedSize: size || "",
+        selectedColour: colour || "",
+        cartId,
+        quantity: 1,
+      },
+    ];
+  });
 
-    const newItem = {
-
-      ...product,
-
-      selectedSize: size,
-
-      selectedColour: colour,
-
-      cartId:
-        `${product.id}-${size}-${colour}`,
-
-      quantity: 1,
-
-    };
-
-
-    setCartItems((prevItems) => {
-
-      const alreadyExists =
-        prevItems.find(
-          (item) =>
-            item.cartId ===
-            newItem.cartId
-        );
-
-
-      // If product already exists
-      // increase quantity
-
-      if (alreadyExists) {
-
-        return prevItems.map(
-          (item) =>
-            item.cartId ===
-            newItem.cartId
-              ? {
-                  ...item,
-                  quantity:
-                    item.quantity + 1,
-                }
-              : item
-        );
-
-      }
-
-
-      return [
-        ...prevItems,
-        newItem,
-      ];
-
-    });
-
-
-    alert(
-      "Product added to bag!"
-    );
-  };
+  alert("Product added to bag!");
+};
 
 
   // ===============================
@@ -177,29 +153,20 @@ export function CartProvider({ children }) {
   // DECREASE QUANTITY
   // ===============================
 
-  const decreaseQuantity = (
-    cartId
-  ) => {
+ const decreaseQuantity = (cartId) => {
+  setCartItems((prevItems) =>
+    prevItems.map((item) => {
+      if (item.cartId !== cartId) {
+        return item;
+      }
 
-    setCartItems(
-      (prevItems) =>
-        prevItems
-          .map((item) =>
-            item.cartId === cartId
-              ? {
-                  ...item,
-                  quantity:
-                    item.quantity - 1,
-                }
-              : item
-          )
-          .filter(
-            (item) =>
-              item.quantity > 0
-          )
-    );
-
-  };
+      return {
+        ...item,
+        quantity: Math.max(1, item.quantity - 1),
+      };
+    })
+  );
+};
 
 
   return (

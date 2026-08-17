@@ -9,6 +9,8 @@ import {
   FiChevronRight,
 } from "react-icons/fi";
 
+import { toast } from "react-hot-toast";
+
 import { useCart } from "../context/CartContext.jsx";
 import { useWishlist } from "../context/WishlistContext.jsx";
 
@@ -313,12 +315,22 @@ function ProductDetails() {
   ===================================================== */
 
   const handleAddToCart = () => {
-    addToCart(
-      product,
-      selectedSize,
-      currentColour
-    );
-  };
+  if (hasColours && !currentColour) {
+    alert("Please select a colour");
+    return;
+  }
+
+  if (product.sizes?.length > 0 && !selectedSize) {
+    alert("Please select a size");
+    return;
+  }
+
+  addToCart(
+    product,
+    selectedSize,
+    currentColour
+  );
+};
 
   /* =====================================================
      WISHLIST
@@ -365,13 +377,10 @@ function ProductDetails() {
         }`}
         onClick={() => setSelectedImage(index)}
       >
-        <img
-          src={image}
-          alt={`${product.name} ${index + 1}`}
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
-        />
+       <ProductImage
+  src={image}
+  alt={`${product.name} ${index + 1}`}
+/>
       </button>
     ))
   ) : (
@@ -388,13 +397,17 @@ function ProductDetails() {
 
           <div className="main-product-image">
 
-  {images.length > 0 && (
-    <img
-      src={images[selectedImage]}
-      alt={product.name}
-      className="main-product-img"
-    />
-  )}
+ {images.length > 0 ? (
+  <ProductImage
+    src={images[safeImageIndex]}
+    alt={product.name}
+    className="main-product-img"
+  />
+) : (
+  <div className="image-not-found">
+    No Image
+  </div>
+)}
 
   {images.length > 1 && (
     <>

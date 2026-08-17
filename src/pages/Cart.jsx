@@ -105,7 +105,7 @@ function Cart() {
                 {/* Product Image */}
 
                 <Link
-                  to={`/products/${item.id}`}
+                  to={`/product/${item.id}`}
                   className="cart-image-link"
                 >
                   <img
