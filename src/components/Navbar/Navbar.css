@@ -610,3 +610,40 @@
 
   gap: 45px;
 }
+
+
+/* =========================================
+   NAVBAR BADGES
+========================================= */
+
+.navbar-action-link,
+.navbar-cart-link {
+  position: relative;
+}
+
+.navbar-badge {
+  position: absolute;
+
+  top: -8px;
+  right: -9px;
+
+  min-width: 17px;
+  height: 17px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: #111;
+  color: #fff;
+
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+}

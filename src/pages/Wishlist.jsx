@@ -45,6 +45,8 @@ function Wishlist() {
       defaultColour
     );
 
+
+    removeFromWishlist(product.id);
   };
 
 

@@ -8,7 +8,8 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi";
-
+import { useWishlist } from "../../context/WishlistContext";
+import { useCart } from "../../context/CartContext";
 import "./Navbar.css";
 
 function Navbar() {
@@ -16,7 +17,8 @@ function Navbar() {
   const[search ,setSearch ]=useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [megaMenu, setMegaMenu] = useState(null);
-
+const {wishlistItems } = useWishlist();
+const {cartItems } = useCart();
   return (
     <header
       className="navbar"
@@ -106,21 +108,33 @@ function Navbar() {
 
 
           <Link
-            to="/wishlist"
-            className="navbar-action-link"
-            aria-label="Wishlist"
-          >
-            <FiHeart />
-          </Link>
+  to="/wishlist"
+  className="navbar-action-link"
+  aria-label="Wishlist"
+>
+  <FiHeart />
+
+  {wishlistItems.length > 0 && (
+    <span className="navbar-badge">
+      {wishlistItems.length}
+    </span>
+  )}
+</Link>
 
 
           <Link
-            to="/cart"
-            className="navbar-cart-link"
-            aria-label="Cart"
-          >
-            <FiShoppingBag />
-          </Link>
+  to="/cart"
+  className="navbar-cart-link"
+  aria-label="Cart"
+>
+  <FiShoppingBag />
+
+  {cartItems.length > 0 && (
+    <span className="navbar-badge">
+      {cartItems.length}
+    </span>
+  )}
+</Link>
 
 
           {/* Mobile Menu */}
