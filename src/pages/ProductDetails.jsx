@@ -269,9 +269,56 @@ function ProductDetails() {
      RECENTLY SEEN
   ===================================================== */
 
-  const recentlySeenProducts = products
-    .filter((item) => item.id !== product.id)
-    .slice(0, 4);
+ /* =====================================================
+   RECENTLY VIEWED PRODUCTS
+===================================================== */
+
+useEffect(() => {
+  if (!product) return;
+
+  const savedRecent =
+    JSON.parse(
+      localStorage.getItem("recentlyViewed")
+    ) || [];
+
+  // Remove current product if already present
+  const filteredRecent =
+    savedRecent.filter(
+      (item) => item.id !== product.id
+    );
+
+  // Current product ko sabse aage rakho
+  const updatedRecent = [
+    product.id,
+    ...filteredRecent,
+  ].slice(0, 8);
+
+  localStorage.setItem(
+    "recentlyViewed",
+    JSON.stringify(updatedRecent)
+  );
+}, [product]);
+
+const recentlyViewedIds =
+  JSON.parse(
+    localStorage.getItem("recentlyViewed")
+  ) || [];
+
+const recentlySeenProducts =
+  recentlyViewedIds
+    .map((recentId) =>
+      products.find(
+        (item) => item.id === recentId
+      )
+    )
+    .filter(
+      (item) =>
+        item &&
+        item.id !== product.id
+    )
+    .slice(0, 8);
+
+
 
   /* =====================================================
      CHANGE COLOUR
@@ -829,6 +876,99 @@ function ProductDetails() {
 
       </section>
 
+
+{/* =================================================
+    RECENTLY VIEWED PRODUCTS
+================================================= */}
+
+{recentlySeenProducts.length > 0 && (
+  <section className="product-recommendation-section">
+
+    <div className="section-title recommendation-heading">
+
+      <h2>
+        Recently Viewed
+      </h2>
+
+      <Link to="/products">
+        VIEW ALL
+      </Link>
+
+    </div>
+
+    <div className="recommendation-grid">
+
+      {recentlySeenProducts.map((item) => {
+
+        const itemImage =
+          getProductImages(item, 0)[0];
+
+        return (
+          <Link
+            to={`/product/${item.id}`}
+            className="recommendation-card"
+            key={item.id}
+          >
+
+            <div className="recommendation-image">
+
+              <ProductImage
+                src={itemImage}
+                alt={item.name}
+              />
+
+              <button
+                type="button"
+                className="recommendation-heart"
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                <FiHeart />
+              </button>
+
+            </div>
+
+            <div className="recommendation-info">
+
+              <p>
+                {item.brand}
+              </p>
+
+              <h3>
+                {item.name}
+              </h3>
+
+              <div className="recommendation-price">
+
+                <strong>
+                  ₹{item.price}
+                </strong>
+
+                {item.originalPrice && (
+                  <span>
+                    ₹{item.originalPrice}
+                  </span>
+                )}
+
+                {item.discount && (
+                  <em>
+                    {item.discount}% OFF
+                  </em>
+                )}
+
+              </div>
+
+            </div>
+
+          </Link>
+        );
+      })}
+
+    </div>
+
+  </section>
+)}
       {/* =================================
 
       TESTIMONIALS

@@ -12,9 +12,13 @@ import Wishlist from "./pages/Wishlist.jsx";
 import Profile from "./pages/Profile.jsx";
 import Addresses from "./pages/Addresses.jsx";
 import Orders from "./pages/Orders.jsx";
+
+import AdminProducts from "./pages/Admin/AdminProducts.jsx";
+import { VerificationProvider } from "./context/VerificationContext.jsx";
 function App() {
   return (
-    <>
+    <VerificationProvider>
+
       <Navbar />
 
       <Routes>
@@ -67,6 +71,11 @@ element={<Orders />}
           element={<Wishlist />}
         />
 
+        <Route 
+        path="/admin/products"
+        element={<AdminProducts />}
+        />
+
         {/* 404 */}
         <Route
           path="*"
@@ -76,7 +85,7 @@ element={<Orders />}
       </Routes>
 
       <Footer />
-    </>
+    </VerificationProvider>
   );
 }
 
