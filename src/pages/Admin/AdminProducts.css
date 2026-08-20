@@ -1,221 +1,321 @@
+/* =========================================
+   ADMIN PRODUCTS PAGE
+========================================= */
+
 .admin-products-page {
   min-height: 100vh;
-  padding: 40px 5%;
-  background: #f7f7f7;
+  padding: 48px 5%;
+  background: #f6f6f6;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================================
+   HEADER
+========================================= */
 
 .admin-products-header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .admin-eyebrow {
   margin: 0 0 8px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   color: #777;
 }
 
 .admin-products-header h1 {
   margin: 0;
   font-size: 32px;
+  line-height: 1.2;
   font-weight: 700;
   color: #111;
 }
 
 .admin-subtitle {
   margin: 10px 0 0;
+  max-width: 600px;
   color: #777;
   font-size: 14px;
-  max-width: 550px;
   line-height: 1.6;
 }
 
 .admin-product-count {
-  padding: 12px 18px;
+  padding: 11px 17px;
   background: #fff;
-  border: 1px solid #e5e5e5;
-  font-size: 14px;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  color: #111;
+  font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
 }
 
 
-/* ================= TABLE ================= */
+/* =========================================
+   PRODUCTS CONTAINER
+========================================= */
 
 .admin-products-section {
   background: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .admin-products-table {
   width: 100%;
 }
 
-.admin-table-row {
-  display: grid;
-  grid-template-columns:
-    minmax(280px, 2fr)
-    1fr
-    0.8fr
-    1fr
-    80px;
 
-  align-items: center;
-  gap: 20px;
-  padding: 16px 20px;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.admin-table-row:last-child {
-  border-bottom: none;
-}
-
-
-/* ================= TABLE HEADER ================= */
-
-.admin-table-header {
-  background: #fafafa;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: #666;
-}
-
-
-/* ================= PRODUCT ================= */
-
-.admin-product-info {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-}
-
-.admin-product-image {
-  width: 65px;
-  height: 75px;
-  object-fit: cover;
-  flex-shrink: 0;
-  background: #f1f1f1;
-}
-
-.admin-product-info h3 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-  color: #111;
-  line-height: 1.4;
-}
-
-.admin-product-info p {
-  margin: 5px 0 0;
-  font-size: 12px;
-  color: #777;
-}
-
-
-/* ================= DETAILS ================= */
-
-.admin-product-category {
-  font-size: 13px;
-  text-transform: capitalize;
-  color: #555;
-}
-
-.admin-product-price {
-  font-size: 14px;
-  font-weight: 600;
-  color: #111;
-}
-
-
-/* ================= STATUS ================= */
-
-.admin-verification-status {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.admin-verification-status.verified {
-  color: #16803c;
-}
-
-.admin-verification-status.not-verified {
-  color: #999;
-}
-
-
-/* ================= VERIFY BUTTON ================= */
-.admin-status-button {
-  width: 38px;
-  height: 38px;
-  border: 1px solid #ccc;
-  background: #fff;
-  color: #aaa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 700;
-  transition: 0.2s ease;
-}
-
-.admin-status-button:hover {
-  border-color: #111;
-  color: #111;
-}
-
-.admin-status-button.active {
-  background: #111;
-  border-color: #111;
-  color: #fff;
-}
+/* =========================================
+   TABLE ROW
+========================================= */
 
 .admin-table-row {
   display: grid;
 
   grid-template-columns:
-    minmax(280px, 2fr)
+    minmax(300px, 2.2fr)
     1fr
     100px
     110px
     110px;
 
   align-items: center;
+
   gap: 20px;
-  padding: 16px 20px;
+
+  min-height: 92px;
+
+  padding: 14px 22px;
+
   border-bottom: 1px solid #eeeeee;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* ================= MOBILE ================= */
+.admin-table-row:last-child {
+  border-bottom: none;
+}
+
+.admin-table-row:not(.admin-table-header):hover {
+  background: #fafafa;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.admin-table-header {
+  min-height: 52px;
+
+  background: #fafafa;
+
+  color: #666;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  border-bottom: 1px solid #e3e3e3;
+}
+
+
+/* =========================================
+   PRODUCT INFORMATION
+========================================= */
+
+.admin-product-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  min-width: 0;
+}
+
+.admin-product-image {
+  width: 62px;
+  height: 72px;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  background: #f1f1f1;
+
+  border-radius: 3px;
+
+  border: 1px solid #eeeeee;
+}
+
+.admin-product-info h3 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.admin-product-info p {
+  margin: 5px 0 0;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.admin-product-category {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 6px 10px;
+
+  background: #f5f5f5;
+
+  border-radius: 3px;
+
+  color: #555;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================================
+   STATUS BUTTON
+========================================= */
+
+.admin-status-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+
+  background: #fff;
+
+  color: transparent;
+
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.admin-status-button:hover {
+  border-color: #111;
+
+  color: #111;
+
+  background: #fafafa;
+
+  transform: translateY(-1px);
+}
+
+.admin-status-button:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================
+   ACTIVE CHECK
+========================================= */
+
+.admin-status-button.active {
+  background: #111;
+
+  border-color: #111;
+
+  color: #fff;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.admin-status-button.active:hover {
+  background: #222;
+
+  border-color: #222;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.admin-status-button:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
 
 @media (max-width: 900px) {
 
   .admin-products-page {
-    padding: 25px 16px;
+    padding: 32px 16px;
   }
 
   .admin-products-header {
     align-items: flex-start;
     flex-direction: column;
+
+    gap: 18px;
   }
 
   .admin-products-header h1 {
-    font-size: 26px;
+    font-size: 27px;
+  }
+
+  .admin-product-count {
+    padding: 10px 15px;
   }
 
   .admin-products-section {
     overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
   }
 
   .admin-products-table {
@@ -225,18 +325,22 @@
 }
 
 
-/* ================= SMALL MOBILE
-
-============== */
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
 @media (max-width: 500px) {
 
   .admin-products-page {
-    padding: 20px 12px;
+    padding: 24px 12px;
   }
 
   .admin-products-header h1 {
     font-size: 23px;
+  }
+
+  .admin-eyebrow {
+    font-size: 10px;
   }
 
   .admin-subtitle {

@@ -5,11 +5,14 @@ import {CartProvider} from "./context/CartContext.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import { WishlistProvider } from "./context/WishlistContext.jsx";
+import ProductStatusProvider from "./context/ProductStatusContext.jsx";
+
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     
       <BrowserRouter>
-        
+         <ProductStatusProvider>
        <CartProvider>
          <WishlistProvider>
           <App />
@@ -17,6 +20,7 @@ createRoot(document.getElementById("root")).render(
         
         </CartProvider>
        
+       </ProductStatusProvider>
       </BrowserRouter>
     
   </StrictMode>
