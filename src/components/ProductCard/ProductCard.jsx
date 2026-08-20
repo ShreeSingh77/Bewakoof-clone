@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { useWishlist } from "../../context/WishlistContext.jsx";
 
+
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
@@ -12,7 +13,10 @@ function ProductCard({ product }) {
     isInWishlist,
   } = useWishlist();
 
-  const wishlistActive = isInWishlist(product.id);
+  
+const wishlistActive = isInWishlist(product.id);
+
+
 
   const handleWishlist = (e) => {
     e.preventDefault();
@@ -70,6 +74,7 @@ function ProductCard({ product }) {
             {product.discount}% OFF
           </span>
         )}
+
 
       </div>
 

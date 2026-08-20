@@ -14,10 +14,10 @@ import Addresses from "./pages/Addresses.jsx";
 import Orders from "./pages/Orders.jsx";
 
 import AdminProducts from "./pages/Admin/AdminProducts.jsx";
-import { VerificationProvider } from "./context/VerificationContext.jsx";
+import ProductStatusProvider from "./context/ProductStatusContext.jsx";
 function App() {
   return (
-    <VerificationProvider>
+    <ProductStatusProvider>
 
       <Navbar />
 
@@ -85,7 +85,7 @@ element={<Orders />}
       </Routes>
 
       <Footer />
-    </VerificationProvider>
+    </ProductStatusProvider>
   );
 }
 

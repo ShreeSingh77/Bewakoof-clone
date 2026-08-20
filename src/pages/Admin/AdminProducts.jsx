@@ -1,75 +1,101 @@
-import { useVerification } from "../../context/VerificationContext";
+import { useProductStatus } from "../../context/ProductStatusContext";
 import products from "../../data/products";
 
 import "./AdminProducts.css";
 
 function AdminProducts() {
   const {
-    verifyProduct,
-    unverifyProduct,
-    isProductVerified,
-  } = useVerification();
+    toggleProductStatus,
+    isProductStatusActive,
+  } = useProductStatus();
 
-  const handleVerification = (productId) => {
-    if (isProductVerified(productId)) {
-      unverifyProduct(productId);
-    } else {
-      verifyProduct(productId);
-    }
+  const handleToggle = (productId, status) => {
+    toggleProductStatus(productId, status);
   };
 
   return (
     <main className="admin-products-page">
 
-      {/* HEADER */}
+      {/* ================= HEADER ================= */}
+
       <div className="admin-products-header">
+
         <div>
           <p className="admin-eyebrow">
             ADMIN PANEL
           </p>
 
           <h1>
-            Product Verification
+            Product Management
           </h1>
 
           <p className="admin-subtitle">
-            Verify products that should display the
-            verified badge on the customer UI.
+            Select products for Trending, New Arrival
+            and Best Seller sections.
           </p>
         </div>
 
         <div className="admin-product-count">
           {products.length} Products
         </div>
+
       </div>
 
 
-      {/* PRODUCTS TABLE */}
+      {/* ================= PRODUCTS ================= */}
+
       <section className="admin-products-section">
 
         <div className="admin-products-table">
 
-          {/* TABLE HEADER */}
+          {/* HEADER */}
+
           <div className="admin-table-row admin-table-header">
 
-            <span>Product</span>
+            <span>
+              Product
+            </span>
 
-            <span>Category</span>
+            <span>
+              Category
+            </span>
 
-            <span>Price</span>
+            <span>
+              Trending
+            </span>
 
-            <span>Status</span>
+            <span>
+              New Arrival
+            </span>
 
-            <span>Action</span>
+            <span>
+              Best Seller
+            </span>
 
           </div>
 
 
-          {/* PRODUCTS */}
+          {/* PRODUCT LIST */}
+
           {products.map((product) => {
 
-            const verified =
-              isProductVerified(product.id);
+            const trending =
+              isProductStatusActive(
+                product.id,
+                "trending"
+              );
+
+            const newArrival =
+              isProductStatusActive(
+                product.id,
+                "newArrival"
+              );
+
+            const bestSeller =
+              isProductStatusActive(
+                product.id,
+                "bestSeller"
+              );
 
             return (
               <div
@@ -78,6 +104,7 @@ function AdminProducts() {
               >
 
                 {/* PRODUCT */}
+
                 <div className="admin-product-info">
 
                   <img
@@ -87,6 +114,7 @@ function AdminProducts() {
                   />
 
                   <div>
+
                     <h3>
                       {product.name}
                     </h3>
@@ -94,55 +122,76 @@ function AdminProducts() {
                     <p>
                       {product.brand || "Bewakoof"}
                     </p>
+
                   </div>
 
                 </div>
 
 
                 {/* CATEGORY */}
+
                 <span className="admin-product-category">
                   {product.category}
                 </span>
 
 
-                {/* PRICE */}
-                <span className="admin-product-price">
-                  ₹{product.price}
-                </span>
+                {/* TRENDING */}
 
-
-                {/* STATUS */}
-                <span
-                  className={`admin-verification-status ${
-                    verified
-                      ? "verified"
-                      : "not-verified"
-                  }`}
-                >
-                  {verified
-                    ? "✓ Verified"
-                    : "Not Verified"}
-                </span>
-
-
-                {/* ACTION */}
                 <button
                   type="button"
-                  className={`admin-verify-button ${
-                    verified
-                      ? "verified-button"
+                  className={`admin-status-button ${
+                    trending
+                      ? "active"
                       : ""
                   }`}
                   onClick={() =>
-                    handleVerification(product.id)
-                  }
-                  aria-label={
-                    verified
-                      ? "Unverify product"
-                      : "Verify product"
+                    handleToggle(
+                      product.id,
+                      "trending"
+                    )
                   }
                 >
-                  {verified ? "✓" : "✓"}
+                  {trending ? "✓" : ""}
+                </button>
+
+
+                {/* NEW ARRIVAL */}
+
+                <button
+                  type="button"
+                  className={`admin-status-button ${
+                    newArrival
+                      ? "active"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    handleToggle(
+                      product.id,
+                      "newArrival"
+                    )
+                  }
+                >
+                  {newArrival ? "✓" : ""}
+                </button>
+
+
+                {/* BEST SELLER */}
+
+                <button
+                  type="button"
+                  className={`admin-status-button ${
+                    bestSeller
+                      ? "active"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    handleToggle(
+                      product.id,
+                      "bestSeller"
+                    )
+                  }
+                >
+                  {bestSeller ? "✓" : ""}
                 </button>
 
               </div>
