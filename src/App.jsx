@@ -16,6 +16,7 @@ import Orders from "./pages/Orders.jsx";
 
 import AdminProducts from "./pages/Admin/AdminProducts.jsx";
 import ProductStatusProvider from "./context/ProductStatusContext.jsx";
+import AdminCategories from "./pages/AdminCategories.jsx";
 function App() {
   return (
     <ProductStatusProvider>
@@ -37,6 +38,11 @@ function App() {
           path="/products"
           element={<Products />}
         />
+
+        <Route
+  path="/admin/categories"
+  element={<AdminCategories />}
+/>
 
         {/* PRODUCT DETAILS */}
         <Route

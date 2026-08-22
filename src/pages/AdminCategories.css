@@ -1,0 +1,398 @@
+/* =========================================
+   ADMIN CATEGORY PAGE
+========================================= */
+
+.admin-categories-page {
+  min-height: 100vh;
+
+  padding: 45px 5% 80px;
+
+  background: #f7f7f7;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-categories-header {
+  max-width: 1400px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.admin-categories-eyebrow {
+  margin: 0 0 8px;
+
+  color: #777;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.admin-categories-header h1 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-categories-subtitle {
+  max-width: 600px;
+
+  margin: 10px 0 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.admin-category-count {
+  padding: 12px 18px;
+
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+
+  color: #111;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   CREATE CATEGORY
+========================================= */
+
+.admin-category-create {
+  max-width: 1400px;
+
+  margin: 0 auto 30px;
+
+  padding: 28px;
+
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+}
+
+.admin-category-create-header h2 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 20px;
+}
+
+.admin-category-create-header p {
+  margin: 7px 0 22px;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-category-form {
+  display: flex;
+
+  gap: 12px;
+}
+
+.admin-category-input-wrapper {
+  flex: 1;
+}
+
+.admin-category-input-wrapper input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  background: #fff;
+
+  border: 1px solid #d8d8d8;
+
+  outline: none;
+
+  color: #111;
+
+  font-size: 14px;
+
+  transition: border-color 0.2s ease;
+}
+
+.admin-category-input-wrapper input:focus {
+  border-color: #111;
+}
+
+.admin-category-input-wrapper input::placeholder {
+  color: #999;
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.admin-add-category-button {
+  min-width: 165px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px solid #111;
+
+  background: #111;
+
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-add-category-button:hover {
+  background: #333;
+
+  border-color: #333;
+}
+
+
+/* =========================================
+   CATEGORY LIST
+========================================= */
+
+.admin-category-list-section {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+}
+
+.admin-category-list-header {
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.admin-category-list-header p {
+  margin: 0 0 5px;
+
+  color: #888;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-category-list-header h2 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   CATEGORY ITEM
+========================================= */
+
+.admin-category-item {
+  min-height: 65px;
+
+  padding: 12px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.admin-category-item:last-child {
+  border-bottom: none;
+}
+
+.admin-category-name {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #222;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-category-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #111;
+}
+
+
+/* =========================================
+   DELETE
+========================================= */
+
+.admin-delete-category {
+  padding: 9px 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  color: #777;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-delete-category:hover {
+  border-color: #111;
+
+  color: #111;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.admin-empty-categories {
+  padding: 55px 20px;
+
+  text-align: center;
+}
+
+.admin-empty-categories h3 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 16px;
+}
+
+.admin-empty-categories p {
+  margin: 7px 0 0;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-categories-page {
+    padding: 30px 16px 60px;
+  }
+
+  .admin-categories-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .admin-categories-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-category-create {
+    padding: 20px;
+  }
+
+  .admin-category-form {
+    flex-direction: column;
+  }
+
+  .admin-add-category-button {
+    min-height: 48px;
+  }
+
+  .admin-category-item {
+    padding: 12px 16px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .admin-categories-page {
+    padding: 25px 12px 50px;
+  }
+
+  .admin-categories-header h1 {
+    font-size: 23px;
+  }
+
+  .admin-category-name {
+    font-size: 13px;
+  }
+
+  .admin-delete-category span {
+    display: none;
+  }
+
+}
