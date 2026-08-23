@@ -38,45 +38,53 @@ function CategoryProvider({ children }) {
   // ADD CATEGORY
   // =========================
 
-  const addCategory = (category) => {
+  const addCategory = (name, parent, section) => {
 
-    const cleanCategory =
-      category.trim();
+   const cleanName = name.trim();
 
-    if (!cleanCategory) {
-      return;
-    }
-
-    const alreadyExists =
-      categories.some(
-        (item) =>
-          item.toLowerCase() ===
-          cleanCategory.toLowerCase()
-      );
-
+if (!cleanName || !parent || !section) {
+  return false;
+}
+    const alreadyExists = categories.some(
+  (category) =>
+    category.name.toLowerCase() ===
+      cleanName.toLowerCase() &&
+    category.parent === parent &&
+    category.section === section
+);
     if (alreadyExists) {
-      return;
+      return false;
     }
 
-    setCategories((prev) => [
-      ...prev,
-      cleanCategory,
-    ]);
+   setCategories((prev) => [
+  ...prev,
+  {
+    name: cleanName,
+    parent: parent,
+    section: section,
+  },
+]);
+
+    return true;
   };
 
 
   // =========================
   // DELETE CATEGORY
   // =========================
+const deleteCategory = (category) => {
 
-  const deleteCategory = (category) => {
-
-    setCategories((prev) =>
-      prev.filter(
-        (item) => item !== category
-      )
-    );
-  };
+  setCategories((prev) =>
+    prev.filter(
+      (item) =>
+        !(
+          item.name === category.name &&
+          item.parent === category.parent &&
+          item.section === category.section
+        )
+    )
+  );
+};
 
 
   return (

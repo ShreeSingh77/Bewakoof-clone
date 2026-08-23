@@ -8,8 +8,10 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi";
+import products from "../../data/products";
 import { useWishlist } from "../../context/WishlistContext";
 import { useCart } from "../../context/CartContext";
+import { useCategory } from "../../context/CategoryContext";
 import "./Navbar.css";
 
 function Navbar() {
@@ -19,6 +21,17 @@ function Navbar() {
   const [megaMenu, setMegaMenu] = useState(null);
 const {wishlistItems } = useWishlist();
 const {cartItems } = useCart();
+const { categories } = useCategory();
+
+
+
+const getCategoriesForMenu = (parent, section) => {
+  return categories.filter(
+    (category) =>
+      category.parent === parent &&
+      category.section === section
+  );
+};
   return (
     <header
       className="navbar"
@@ -156,262 +169,265 @@ const {cartItems } = useCart();
       {/* =================================================
           MEGA MENU
       ================================================= */}
-
-      {megaMenu && (
-        <div className="mega-menu">
-
-          <div className="mega-menu-container">
-
-
-            {/* ================= MEN ================= */}
-
-            {megaMenu === "men" && (
-              <>
-
-                <div className="mega-column">
-
-                  <h3>TOPWEAR</h3>
-
-                  <Link to="/products?category=men&subcategory=t-shirts">
-  T-Shirts
-</Link>
-
-<Link to="/products?category=men&subcategory=oversized-t-shirts">
-  Oversized T-Shirts
-</Link>
-
-<Link to="/products?category=men&subcategory=shirts">
-  Shirts
-</Link>
-
-<Link to="/products?category=men&subcategory=hoodies">
-  Hoodies
-</Link>
-
-<Link to="/products?category=men&subcategory=sweatshirts">
-  Sweatshirts
-</Link>
-
-                </div>
-
-
-                <div className="mega-column">
-
-                  <h3>BOTTOMWEAR</h3>
-
-                  <Link to="/products?category=men&subcategory=jeans">
-  Jeans
-</Link>
-
-<Link to="/products?category=men&subcategory=joggers">
-  Joggers
-</Link>
-
-<Link to="/products?category=men&subcategory=shorts">
-  Shorts
-</Link>
-
-<Link to="/products?category=men&subcategory=trousers">
-  Trousers
-</Link>
-                </div>
-
-
-                <div className="mega-column">
-
-                  <h3>FOOTWEAR</h3>
-
-                 <Link to="/products?category=men&subcategory=sneakers">
-  Sneakers
-</Link>
-
-<Link to="/products?category=men&subcategory=casual-shoes">
-  Casual Shoes
-</Link>
-
-<Link to="/products?category=men&subcategory=slippers">
-  Slippers
-</Link>
-
-                </div>
-
-
-                <div className="mega-column highlight-column">
-
-                  <h3>SHOP MEN</h3>
-
-                  <Link to="/products?category=men">
-                    All Men's Products
-                  </Link>
-
-                  <Link to="/products?category=men">
-                    New Arrivals
-                  </Link>
-
-                  <Link to="/products?category=men">
-                    Best Sellers
-                  </Link>
-
-                </div>
-
-              </>
-            )}
-
-
-            {/* ================= WOMEN ================= */}
-
-            {megaMenu === "women" && (
-              <>
-
-                <div className="mega-column">
-
-                  <h3>TOPWEAR</h3>
-
-                  <Link to="/products?category=women&subcategory=t-shirts">
-  T-Shirts
-</Link>
-
-<Link to="/products?category=women&subcategory=tops">
-  Tops
-</Link>
-
-<Link to="/products?category=women&subcategory=shirts">
-  Shirts
-</Link>
-
-<Link to="/products?category=women&subcategory=hoodies">
-  Hoodies
-</Link>
-
-                </div>
-
-
-                <div className="mega-column">
-
-                  <h3>BOTTOMWEAR</h3>
-
-                 <Link to="/products?category=women&subcategory=jeans">
-  Jeans
-</Link>
-
-<Link to="/products?category=women&subcategory=joggers">
-  Joggers
-</Link>
-
-<Link to="/products?category=women&subcategory=trousers">
-  Trousers
-</Link>
-
-<Link to="/products?category=women&subcategory=shorts">
-  Shorts
-</Link>
-
-                </div>
-
-
-                <div className="mega-column">
-
-                  <h3>ETHNIC WEAR</h3>
-
-                 <Link to="/products?category=women&subcategory=kurtas">
-  Kurtas
-</Link>
-
-<Link to="/products?category=women&subcategory=dresses">
-  Dresses
-</Link>
-
-<Link to="/products?category=women&subcategory=co-ords">
-  Co-ords
-</Link>
-
-                </div>
-
-
-                <div className="mega-column highlight-column">
-
-                  <h3>SHOP WOMEN</h3>
-
-                  <Link to="/products?category=women">
-                    All Women's Products
-                  </Link>
-
-                  <Link to="/products?category=women">
-                    New Arrivals
-                  </Link>
-
-                  <Link to="/products?category=women">
-                    Best Sellers
-                  </Link>
-
-                </div>
-
-              </>
-            )}
-
-
-            {/* ================= ACCESSORIES ================= */}
-
-            {megaMenu === "accessories" && (
-              <>
-
-                <div className="mega-column">
-
-                  <h3>ACCESSORIES</h3>
-
-                 <Link to="/products?category=accessories&subcategory=caps">
-  Caps
-</Link>
-
-<Link to="/products?category=accessories&subcategory=bags">
-  Bags
-</Link>
-
-<Link to="/products?category=accessories&subcategory=clogs">
-  clogs
-</Link>
-
-
-
-                </div>
-
-
-                <div className="mega-column">
-
-                  <h3>COLLECTIONS</h3>
-
-                  <Link to="/products?category=accessories">
-                    Trending
-                  </Link>
-
-                  <Link to="/products?category=accessories">
-                    New Arrivals
-                  </Link>
-
-                  <Link to="/products?category=accessories">
-                    Best Sellers
-                  </Link>
-
-                </div>
-
-
-                <div className="mega-column highlight-column">
-
-                  <h3>SHOP ACCESSORIES</h3>
-
-                  <Link to="/products?category=accessories">
-                    All Accessories
-                  </Link>
-
-                </div>
-
-              </>
-            )}
+{/* =================================================
+    MEGA MENU
+================================================= */}
+
+{megaMenu && (
+  <div className="mega-menu">
+
+    <div className="mega-menu-container">
+
+      {/* ================= MEN ================= */}
+
+      {megaMenu === "men" && (
+        <>
+<div className="mega-column">
+
+  <h3>TOPWEAR</h3>
+
+  {getCategoriesForMenu("men", "topwear").map(
+    (category) => {
+
+      const slug = category.name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-");
+
+      return (
+        <Link
+          key={`${category.parent}-${category.section}-${category.name}`}
+          to={`/products?category=men&subcategory=${slug}`}
+        >
+          {category.name}
+        </Link>
+      );
+    }
+  )}
+
+</div>
+
+<div className="mega-column">
+
+  <h3>BOTTOMWEAR</h3>
+
+  {getCategoriesForMenu("men", "bottomwear").map(
+    (category) => {
+
+      const slug = category.name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-");
+
+      return (
+        <Link
+          key={`${category.parent}-${category.section}-${category.name}`}
+          to={`/products?category=men&subcategory=${slug}`}
+        >
+          {category.name}
+        </Link>
+      );
+    }
+  )}
+
+</div>
+<div className="mega-column">
+
+  <h3>FOOTWEAR</h3>
+
+  {getCategoriesForMenu("men", "footwear").map(
+    (category) => {
+
+      const slug = category.name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-");
+
+      return (
+        <Link
+          key={`${category.parent}-${category.section}-${category.name}`}
+          to={`/products?category=men&subcategory=${slug}`}
+        >
+          {category.name}
+        </Link>
+      );
+    }
+  )}
+
+</div>
+
+          <div className="mega-column highlight-column">
+
+            <h3>SHOP MEN</h3>
+
+            <Link to="/products?category=men">
+              All Men's Products
+            </Link>
+
+            <Link to="/products?category=men">
+              New Arrivals
+            </Link>
+
+            <Link to="/products?category=men">
+              Best Sellers
+            </Link>
 
           </div>
 
-        </div>
+        </>
       )}
+
+
+      {/* ================= WOMEN ================= */}
+
+      {megaMenu === "women" && (
+        <>
+
+<div className="mega-column">
+
+  <h3>TOPWEAR</h3>
+
+  {getCategoriesForMenu("women", "topwear").map(
+    (category) => {
+
+      const slug = category.name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-");
+
+      return (
+        <Link
+          key={`${category.parent}-${category.section}-${category.name}`}
+          to={`/products?category=women&subcategory=${slug}`}
+        >
+          {category.name}
+        </Link>
+      );
+    }
+  )}
+
+</div>
+
+<div className="mega-column">
+
+  <h3>BOTTOMWEAR</h3>
+
+  {getCategoriesForMenu("women", "bottomwear").map(
+    (category) => {
+
+      const slug = category.name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-");
+
+      return (
+        <Link
+          key={`${category.parent}-${category.section}-${category.name}`}
+          to={`/products?category=women&subcategory=${slug}`}
+        >
+          {category.name}
+        </Link>
+      );
+    }
+  )}
+
+</div>
+
+<div className="mega-column">
+
+  <h3>ETHNIC WEAR</h3>
+
+  {getCategoriesForMenu("women", "ethnic-wear").map(
+    (category) => {
+
+      const slug = category.name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-");
+
+      return (
+        <Link
+          key={`${category.parent}-${category.section}-${category.name}`}
+          to={`/products?category=women&subcategory=${slug}`}
+        >
+          {category.name}
+        </Link>
+      );
+    }
+  )}
+
+</div>
+
+          <div className="mega-column highlight-column">
+
+            <h3>SHOP WOMEN</h3>
+
+            <Link to="/products?category=women">
+              All Women's Products
+            </Link>
+
+            <Link to="/products?category=women">
+              New Arrivals
+            </Link>
+
+            <Link to="/products?category=women">
+              Best Sellers
+            </Link>
+
+          </div>
+
+        </>
+      )}
+
+
+      {/* ================= ACCESSORIES ================= */}
+
+      {megaMenu === "accessories" && (
+        <>
+
+          <div className="mega-column">
+
+  <h3>ACCESSORIES</h3>
+
+  {getCategoriesForMenu(
+    "accessories",
+    "accessories"
+  ).map((category) => {
+
+    const slug = category.name
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-");
+
+    return (
+      <Link
+        key={`${category.parent}-${category.section}-${category.name}`}
+        to={`/products?category=accessories&subcategory=${slug}`}
+      >
+        {category.name}
+      </Link>
+    );
+  })}
+
+</div>
+
+          <div className="mega-column highlight-column">
+
+            <h3>SHOP ACCESSORIES</h3>
+
+            <Link to="/products?category=accessories">
+              All Accessories
+            </Link>
+
+          </div>
+
+        </>
+      )}
+
+    </div>
+
+  </div>
+)}
 
 
       {/* =================================================
