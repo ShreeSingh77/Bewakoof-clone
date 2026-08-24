@@ -1118,7 +1118,7 @@ colours: [
     ],
     sizes: ["S", "M", "L", "XL"],
     image:
-      "produts/men/oversized-tshirts/otshirt2.webp",
+      "/produts/men/oversized-tshirts/oshirts2i.webp",
   },
 
   // Jeans
@@ -2174,7 +2174,7 @@ colours: [
   },
 
   {
-    id: 55,
+    id: 56,
     name: "Women Printed Casual Dress",
     brand: "Bewakoof",
     description: "Comfortable printed kurta for a stylish ethnic look.",

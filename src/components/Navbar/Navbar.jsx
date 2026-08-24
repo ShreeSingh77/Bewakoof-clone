@@ -24,13 +24,13 @@ const {cartItems } = useCart();
 const { categories } = useCategory();
 
 
-
 const getCategoriesForMenu = (parent, section) => {
   return categories.filter(
     (category) =>
       category.parent === parent &&
       category.section === section
   );
+  
 };
   return (
     <header
